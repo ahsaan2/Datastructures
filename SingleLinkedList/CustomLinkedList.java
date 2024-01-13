@@ -127,11 +127,12 @@ public class CustomLinkedList {
     public void removeAtHead(){
         // here if the index is the head
         // 1 2 3 4 5
-        // if the head is null then tail will also be null
+        // if the head is null then tail will also be null --> means we have a empty list
         if(head == null){
             tail = null;
             return;
         }
+        // to remove the element at node --> we will update the current head to the next node and also we will decrease the size
         head = head.next;
         size-=1;
     }
@@ -140,6 +141,8 @@ public class CustomLinkedList {
             return;
         }
         // now if tail is present then we have to reach till tail
+        // So, how do we reach till tail--> we use the two pointer method where both the pointers will start from
+        // head and it will run till while condition becomes false
         Node prev = head;
         Node current = head;
         while (current.next != null) {
@@ -147,19 +150,23 @@ public class CustomLinkedList {
             current = current.next;
 
         }
+        // Our previous pointer will be at what we can tail -1 and we can update the next or reference of previous as null and 
+        // update previous as tail
         prev.next = null;
         tail = prev;
         size-=1;
     }
     public void removeAtIndex(int index){
-        // if we remove at head
+        // If the index is 0 that means we have to remove at head 
         if(index == 0){
             removeAtHead();
         }
+        // if the index given is the size we will remove at the tail
+        // remember always decrease the size once we remove an element
         if (index == size) {
             removeAtTail();        
         }
-        else{
+        else{   // this executes if the index is in between head and tail
             Node prev = head;
             Node current = head;
             int i = 0;
@@ -169,8 +176,9 @@ public class CustomLinkedList {
               i++;
             }
             if(prev.next!=null){
-                prev .next = prev.next.next;
-                current.next = null;
+                prev .next = prev.next.next;   // our next of the previous element will point to the next of next of that previous 
+                // by this way only we can remove the link between teh previous and the element at the index
+                current.next = null;   // update the index of current element to null
             }
            
         }
