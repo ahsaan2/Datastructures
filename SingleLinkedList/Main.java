@@ -1,7 +1,14 @@
 package SingleLinkedList;
 public class Main {
     public static void main(String [] args){
-        CustomLinkedList list = new CustomLinkedList();
+        CustomLinkedList<Integer> list = new CustomLinkedList<>();
+        CustomLinkedList<String> list1 = new CustomLinkedList<>();
+        list1.insert("ab");
+        list1.insert("cd");
+        list1.insert("ef");
+        list1.insert("gh");
+        list1.display();
+
         list.insert(12);
         list.insert(14);
         list.insert(16);

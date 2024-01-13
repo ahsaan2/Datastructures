@@ -1,6 +1,6 @@
 package SingleLinkedList;
 
-public class CustomLinkedList {
+public class CustomLinkedList<Ttype> {
     // now in linked list we have a head at the start and the tail at the end
     Node head;
     Node tail;
@@ -10,17 +10,17 @@ public class CustomLinkedList {
     // every linked list is made up of the node that contains the int value and the
     // reference to the next node
     class Node {
-        int value;
+        Ttype value;
         Node next;
 
         // create a constructor for the value
-        public Node(int value) {
+        public Node(Ttype value) {
             this.value = value;
         }
 
         // Now we create a constructor for the value and next node --> this helps us
         // adding the element at any specific index
-        public Node(int value, Node next) {
+        public Node(Ttype value, Node next) {
             this.value = value;
             this.next = next;
         }
@@ -32,7 +32,7 @@ public class CustomLinkedList {
     }
 
     // insert method to add the value item in the CustomLinkedList
-    public void insert(int value) {
+    public void insert(Ttype value) {
         // create a new node that will point to the head as well as to the tail
         Node node = new Node(value);
         // if the head and tail are null, then our List is empty.
@@ -53,7 +53,7 @@ public class CustomLinkedList {
     }
 
     // Now add the elements at the tail and also at the head
-    public void insertLast(int value) {
+    public void insertLast(Ttype value) {
         Node node = new Node(value);
         if(tail == null){
             insertFirst(value);
@@ -67,7 +67,7 @@ public class CustomLinkedList {
     }
 
     // now insert the node at the head
-    public void insertFirst(int value) {
+    public void insertFirst(Ttype value) {
         Node node = new Node(value);
         // link this node to the head
         node.next = head;
@@ -81,7 +81,7 @@ public class CustomLinkedList {
     }
 
     // Now how do we add a node at a given index
-    public boolean insertAtIndex(int value, int index) {
+    public boolean insertAtIndex(Ttype value, int index) {
         // now here is the catch --> If the index is 0 then we add at the head and if
         // the index is size then we add at the tail
         Node node = new Node(value);
