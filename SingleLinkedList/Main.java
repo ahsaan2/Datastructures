@@ -1,11 +1,16 @@
-
+package SingleLinkedList;
 public class Main {
     public static void main(String [] args){
         CustomLinkedList list = new CustomLinkedList();
-        // list.insert(12);
-        // list.insert(14);
-        // list.insert(16);
-        // list.insert(26);
+        list.insert(12);
+        list.insert(14);
+        list.insert(16);
+        list.insert(26);  // 3 remove
+        list.insert(30);
+        list.insert(40);  // 5 remove
+        list.insert(50);
+        list.insert(60);
+        list.insert(70);
         // // 12 --> 14--> 16--> 26
         // list.display();
         // System.out.println();
@@ -23,7 +28,18 @@ public class Main {
         // // 16--> 22 --. 26
         // list.display();
         // list.insertAtIndex(-1, 12);
-        list.insertLast(10);
+        // list.insertLast(10);
+        // list.removeAtHead();
+        // list.removeAtHead();
+        // list.removeAtTail();
+        list.display();
+        list.removeAtIndex(3);  //remove 26
+        list.display();
+        list.removeAtIndex(5);  // remove 40
+        list.display();
+        list.removeAtIndex(6);  // remove 50
+            // 12 --> 14 --> 16 --> 30  --> 50
+        
         list.display();
     }
 }

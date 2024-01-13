@@ -1,3 +1,5 @@
+package SingleLinkedList;
+
 public class CustomLinkedList {
     // now in linked list we have a head at the start and the tail at the end
     Node head;
@@ -116,7 +118,64 @@ public class CustomLinkedList {
         }
         return true;
     }
+    /**
+     * remove the nodes at the first index
+     * 
+     * 
+     */
+    
+    public void removeAtHead(){
+        // here if the index is the head
+        // 1 2 3 4 5
+        // if the head is null then tail will also be null
+        if(head == null){
+            tail = null;
+            return;
+        }
+        head = head.next;
+        size-=1;
+    }
+    public void removeAtTail(){
+        if (tail == null) {
+            return;
+        }
+        // now if tail is present then we have to reach till tail
+        Node prev = head;
+        Node current = head;
+        while (current.next != null) {
+            prev = current;
+            current = current.next;
 
+        }
+        prev.next = null;
+        tail = prev;
+        size-=1;
+    }
+    public void removeAtIndex(int index){
+        // if we remove at head
+        if(index == 0){
+            removeAtHead();
+        }
+        if (index == size) {
+            removeAtTail();        
+        }
+        else{
+            Node prev = head;
+            Node current = head;
+            int i = 0;
+            while(i < index){
+              prev = current;
+              current = current.next;
+              i++;
+            }
+            if(prev.next!=null){
+                prev .next = prev.next.next;
+                current.next = null;
+            }
+           
+        }
+       
+    }
     // now display the insert function
     public void display() {
         // here we will create a temp node that will point to the head
