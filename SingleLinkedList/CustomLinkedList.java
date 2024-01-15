@@ -6,6 +6,7 @@ public class CustomLinkedList<Ttype> {
     Node tail;
     // create a size
     private int size = 0;
+    
 
     // every linked list is made up of the node that contains the int value and the
     // reference to the next node
@@ -47,7 +48,8 @@ public class CustomLinkedList<Ttype> {
         // the new node will be always at the end of the linkedList 
         tail.next = node;
         // now since we have added a new node tail should be also updated
-        tail = tail.next;
+       node.next = null;
+       tail = node;
         size += 1;
 
     }
