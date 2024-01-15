@@ -38,6 +38,18 @@ public class Circular {
         size++;
     }
     // insert at the head
+    public void deleteHead(int value){    
+    head = head.next;
+    tail.next = head;
+    size--;
+    }
+    // insert at the end
+    public void insertAtEnd(int value){
+        Node node = new Node(value);
+        tail.next = node;
+        node.next = head;
+        tail = node;
+    }
     
     // how to display
     public void display(){
