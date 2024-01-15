@@ -27,8 +27,37 @@
                 
             }
         }
+        /*
+         * Now this slow and fast pointer can also be used to find the length of the cycle 
+         * So how do we do that --> we know that in this method the slow and fast pointer do meet each pther
+         * So, Once the pointers are met keep the fast pointer there only and keep moving the slow pointer 
+         * till it reaches to the place where fast pointer is as we have already kept fast pointer static
+         * fast pointer ---> till -->> slow pointer --> length
+         
+         */
+        // algorithm to find the length of the cycle
+        /**
+         * Node slow = head;
+         * Node fast = head;
+         * while(slow != null && fast.next!=null){
+         * slow = slow.next;
+         * fast = fast.next.next;
+         * // first check for the cycle
+         * if(slow == fast){
+         * // we have found the cycle
+         * now move the slow pointer
+         * int length =0;
+         * Node temp = slow;
+         * do{
+         * temp = slow.next;
+         * length ++;
+         * // keep moving the temp till it reaches back to slow or fast
+         * while(temp!=slow)
+         * }
+         * 
+         * }
+         * }
+         * 
+         */
 
-    }
 
-
-     */
