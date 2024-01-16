@@ -58,6 +58,14 @@
          * }
          * }
          * 
+         *  --> One more important thing suppose we are running a marathon, One person runs with the speed of x (slow)
+         * and another person runs with the speed of sx (fast). When the person reaches at the end of the marathon the person 
+         * that suns slow will be in the mid of the racing marathon
+         * <--> Same happens with the fast and slow pointer , when fast pointer reaches to the null slow pointer points 
+         * to the middle of linked list
+         * <--> That is slow and fast pointer can also give us the middle of the linked list
+         * 
+         * 
          */
 
 
