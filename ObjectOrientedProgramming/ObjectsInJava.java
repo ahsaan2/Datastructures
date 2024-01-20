@@ -10,7 +10,7 @@ public class ObjectsInJava {
         // Constructor is special function that runs when we create an object and it
         // allocates some varibales
         // By default it does not have arguments --> We provide the arguments
-        System.out.println(ahsaan.roll); // default is 0
+        System.out.println(ahsaan.roll); // default is 0 
         // System.out.println(student1);
         System.out.println(ahsaan.name); // default is null
         // accessing using dot
