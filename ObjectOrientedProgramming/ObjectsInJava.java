@@ -1,7 +1,8 @@
 package ObjectOrientedProgramming;
 
 
-public class Objects {
+
+public class ObjectsInJava {
     public static void main(String[] args) {
         // Student[] student1 = new Student[5];
         Student ahsaan = new Student();
@@ -74,3 +75,4 @@ class Student {
 // what is constructor overloading-->> we have two constructors of the same name that is student
 // But here in one we pass the arguments and in other we do not pass the arguments that is known as
 // constructor overloading
+

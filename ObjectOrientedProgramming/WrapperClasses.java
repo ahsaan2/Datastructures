@@ -26,6 +26,7 @@ public class WrapperClasses {
         A obj;
         for ( int i = 0; i < 1000000000; i++) {   // 
             obj = new A("random");
+            System.out.println(obj);
             
         }
         

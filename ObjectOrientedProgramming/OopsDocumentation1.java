@@ -2,9 +2,7 @@ package ObjectOrientedProgramming;
 
 
 
-public class OopsDocumentation {
-    
-    
+public class OopsDocumentation1 {   
 
 }
     
