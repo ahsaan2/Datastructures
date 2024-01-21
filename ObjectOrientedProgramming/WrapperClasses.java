@@ -6,11 +6,11 @@ public class WrapperClasses {
         int b = 20;
         
         System.out.println( a+" "+ b);  // no swapping will take place
-        // because in primitives the pass by values are just values and a will be passed only as 10
+        // because in primitives the pass by values are just values and "a" will be passed only as 10
         Integer num = 45;  // created as an object
         /**
-         * The wrapper classes in java are used to convert primitive data types to objects
-         * int --> wrapper class is Integer
+         * The wrapper classes in java are used to convert "primitive data types to objects"
+         * int --> wrapper class is "Integer"
          * booleadn --> wrapper class in Boolean
          * 
          */
