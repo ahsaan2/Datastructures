@@ -1,8 +1,9 @@
-package ObjectOrientedProgramming.StacksAndQueues;
+package DoublyLinkedList.StackDataStructure;
+
 
 public class StackMain {
-    public static void main(String[] args)throws Exception{
-        StackCustomImplementation stack = new StackCustomImplementation(5);
+    public static void main(String[] args) throws Exception{
+         StackDataStructure stack = new StackDataStructure(5);
         stack.push(23);
         stack.push(21);
         stack.push(24);
@@ -19,8 +20,5 @@ public class StackMain {
         System.out.println("Peek item is:");
         System.out.println(stack.peek());  // 21
         System.out.println(stack.isEmpty());   // false
-    
-        
     }
-   
 }

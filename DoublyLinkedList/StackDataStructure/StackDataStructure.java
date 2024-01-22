@@ -1,20 +1,18 @@
-package ObjectOrientedProgramming.StacksAndQueues;
+package DoublyLinkedList.StackDataStructure;
 
-
-
-public class StackCustomImplementation {
-   // we have  data and a default size
+public class StackDataStructure {
+    // we have  data and a default size
    // this stack will be of the static type
    protected int[] data;
    protected static final int DEFAULT_SIZE = 10;
    // create a constructo and we do not proveide it anything --> it will take the default size
-   public StackCustomImplementation(){
+   public StackDataStructure(){
     this(DEFAULT_SIZE);
    }
    // create a pointer that will keep on increasing to add the items
    int pointer = -1;
    // create a constructor for the size
-   public StackCustomImplementation(int size){
+   public StackDataStructure(int size){
     this.data = new int[size];
    }
    // check if the item we pushed is present or not
