@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming.StackDataStructure;
+package StackDataStructure;
 
 public class StackDataStructure {
     // we have data and a default size
@@ -65,3 +65,4 @@ public class StackDataStructure {
         return data[pointer];
     }
 }
+
