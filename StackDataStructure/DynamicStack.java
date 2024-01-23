@@ -1,9 +1,13 @@
 package StackDataStructure;
 
 public class DynamicStack extends Stack {
+    // this dynamic stack will have the properties same as that of the stack and
+    // only thing
+    // that differs from the static stack is the push operation.
     public DynamicStack() {
         // If we do not pass anything it will just call super
-        // what is this super going to be-->>Constructor in the parent class that does
+        // what is this super going to be-->>Constructor in the parent class(Stack) that
+        // does
         // not take any argument
         super(); // StackDataStructure()
         // other wise we pass the size
@@ -25,22 +29,23 @@ public class DynamicStack extends Stack {
             // if the stack isfull then we create a temp array that has a size twice the
             // length of the data
             // and whenever the stack gets full, the size is increased by two times
-            int[] temp = new int[data.length * 2]; // temp has the size twice
+            int[] temp = new int[data.length * 2]; // temp has the size twice that of the data
             // copy all previous items in new data
             for (int i = 0; i < data.length; i++) { // traversing teh original data length and then putting
                 // them in the temp variable which will keep on expanding in the dynamic manner.
                 temp[i] = data[i];
 
             }
-            data = temp;  // value of temp now gets stored in the data
+            data = temp; // value of temp now gets stored in the data
 
         }
         // insert item
         // At this point we know that array is not full and we insert the normally
 
-        return super.push(item); 
+        return super.push(item);
         /**
-         * the super keyword refers to the superclass(parent) object. it is used to call superclass methods and to access the superclass constructors.
+         * the super keyword refers to the superclass(parent) object. it is used to call
+         * superclass methods and to access the superclass constructors.
          * In simpler words it is the immediate parent class instance variables
          */
     }

@@ -2,7 +2,7 @@ package StackDataStructure;
 
 public class StackMain {
     public static void main(String[] args) throws Exception {
-        DynamicStack stack = new DynamicStack();
+        DySt stack = new DySt();
 
         stack.push(23);
         stack.push(21);
@@ -12,6 +12,11 @@ public class StackMain {
         stack.push(50); // Exception-->> can not push stack is full
         stack.push(60); // Exception -->> can not push stack is full
         stack.push(10);
+        stack.push(8);
+        stack.push(7);
+        stack.push(4);
+
+
 
         System.out.println("Peek item is:");   // 10
         System.out.println(stack.pop());
@@ -19,6 +24,10 @@ public class StackMain {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+
+
        
         System.out.println(stack.peek()); // 21
         System.out.println(stack.isEmpty()); // false

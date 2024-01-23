@@ -48,7 +48,7 @@ public class Stack {
     protected int[] data;
     protected static final int DEFAULT_SIZE = 10;
 
-    // create a constructo and we do not proveide it anything --> it will take the
+    // create a constructor and we do not proveide it anything --> it will take the
     // default size
     public Stack() {
         this(DEFAULT_SIZE);
