@@ -9,7 +9,7 @@ public class DynamicStack extends Stack {
         // other wise we pass the size
 
     }
-    // creting a construtor that takes arguments as size
+    // creating a construtor that takes arguments as size
 
     public DynamicStack(int size) {
         super(size); // will call StackDataStructure(int size)

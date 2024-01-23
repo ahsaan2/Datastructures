@@ -73,7 +73,7 @@ public class Stack {
         return true;
     }
 
-    // creating isFull
+    // Stack isFull
     public boolean isFull() {
         // when will be the stack when the pointer will be pointing to the last data
         // item
@@ -114,5 +114,5 @@ public class Stack {
  * And the most important part--> error will not force you to use the try-catch
  * block to handle it.
  * Example of error is: StackOverFlow(Occurs due to the infinite recursion) is a
- * buffer overflow error
+ * buffer overflow error.
  */
