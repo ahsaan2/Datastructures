@@ -13,7 +13,7 @@ class StackOverFlowException extends Exception {
 
     // create another constructor that takes the arguments
     public StackOverFlowException(String message) {
-        super(message);
+        super(message); // takes the message present in the isFull 
 
     }
 }
