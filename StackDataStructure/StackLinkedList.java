@@ -91,7 +91,7 @@ public class StackLinkedList {
     }
 
     // pop method should be of the int return type
-    int pop() throws StackUnderFlowException {  // if the stack is empty then it will throw an exception
+    int pop() throws StackUnderFlowException { // if the stack is empty then it will throw an exception
         if (isEmpty()) {
             throw new StackUnderFlowException("Stack is empty:");
             // a custom exception message will be displayed
@@ -104,7 +104,7 @@ public class StackLinkedList {
         return number;
     }
 
-    boolean isEmpty() {  // if the head is null, no item is present
+    boolean isEmpty() { // if the head is null, no item is present
         return head == null;
     }
 }

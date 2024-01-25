@@ -2,11 +2,16 @@ package SingleLinkedList;
 
 import java.util.Arrays;
 
+
 public class SortLinkedList {
     public static void main(String[] args) {
         int[] arr = { 21, 32, 43, 12, 11, 22 };
+        int [] arr1 = {22,34,56,67,78,89};
         int[] ans = merge(arr);
+        int [] ans1 = merge(arr1);
         System.out.println(Arrays.toString(ans));
+        System.out.println(Arrays.toString(ans1));
+
 
     }
 
@@ -69,4 +74,6 @@ public class SortLinkedList {
          
 
     }
+
+    
 }
