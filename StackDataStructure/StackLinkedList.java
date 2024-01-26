@@ -16,27 +16,22 @@ public class StackLinkedList {
 
     // implementation of the dynamic stack using linked list
     /**
-     * Begining of the stack to be preferred as top of the stack-->> why do add or
+     * Begining of the stack to be preferred as top of the stack-->> why do we add or
      * remove the elements at the head
      * -->> because adding and removing the elements at the head is in the Order(1).
      * We use the linked list when the size of the stack is not known in advance-->
-     * in LL there is not limitations
-     * on the number of nodes we create.
+     * in LL there is no limitations on the number of nodes we create.
      * Push()--> this must function in the similar fashion as how we add the node in
-     * the linked list
+     * the linked list.
      * pop()-->> should be like we remove the node in the linked list
      * 
      * <<-->> Structure of the node in the stack is same as that of the linked list,
-     * as we represent stack
-     * in the form of linked list.
+     * as we represent stack in the form of linked list.
      * <<-->> To implement the stack using the linked list , each time we try to put
      * the elements in the stack
      * we add the nodes in the linked list at head, once the node is added at head
-     * and want to add some more,
-     * the new node is made the head each time.
+     * and want to add some more, the new node is made the head each time.
      * Thus adding nodes and removing nodes happen only and only at head.
-     * 
-     * 
      */
     /**
      * Node
@@ -77,8 +72,7 @@ public class StackLinkedList {
             head = node;
         }
         // If we have a head earlier present then we need to add the next of the node to
-        // head
-        // and update the node as head
+        // head and update the node as head
 
         else {
             node.next = head;
@@ -96,7 +90,6 @@ public class StackLinkedList {
             throw new StackUnderFlowException("Stack is empty:");
             // a custom exception message will be displayed
         }
-
         // we have to remove or pop the elements at the head of the linked list
         // store the head of the linked list in some variable and then return that
         int number = head.value;
