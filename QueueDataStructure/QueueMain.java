@@ -8,7 +8,7 @@ public class QueueMain {
         queue.add(43);
         queue.add(54);
         // removal occurs at the front of the queue
-        queue.remove(21);
+       System.out.println(queue.remove());  // 21
         queue.display();
 
     }

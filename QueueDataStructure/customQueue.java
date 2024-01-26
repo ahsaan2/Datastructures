@@ -34,7 +34,7 @@ public class customQueue {
         data[end] = item;
         end++;
     }
-    public int remove(int item) throws Exception{
+    public int remove() throws Exception{
         if (isEmpty()) {
             throw new Exception("Add the items in the queue:");
         }
