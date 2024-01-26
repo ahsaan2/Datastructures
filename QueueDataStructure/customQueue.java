@@ -1,7 +1,7 @@
 package QueueDataStructure;
 
 public class customQueue {
-    private int[] data;
+    public int[] data;
     protected static final int DEFAULT_SIZE = 10;
 
     private int end = 0; // data will be added at the end
@@ -26,13 +26,14 @@ public class customQueue {
     }
 
     // add the elmements in the queue
-    public void add(int item) throws Exception {
+    public boolean add(int item){
         // there is the possibility that the queue will be full
         if (isFull()) {
-           throw new Exception("Queue is full:");
+          return false;
         }
         data[end] = item;
         end++;
+        return true;
     }
     public int remove() throws Exception{
         if (isEmpty()) {
@@ -57,3 +58,7 @@ public class customQueue {
         System.out.println("end");
     }
 }
+/**
+ * Circular queue-->> where the last element of the queue is connected to the first element of the queue
+ * It is also called Ring Buffer.
+ */
