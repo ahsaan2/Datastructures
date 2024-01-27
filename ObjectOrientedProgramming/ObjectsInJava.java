@@ -6,10 +6,10 @@ public class ObjectsInJava {
     public static void main(String[] args) {
         // Student[] student1 = new Student[5];
         Student ahsaan = new Student();
-        // Constructor--> defines what happens when the object is created
+        // Constructor-->> defines what happens when the object is created.
         // Constructor is special function that runs when we create an object and it
-        // allocates some varibales
-        // By default it does not have arguments --> We provide the arguments
+        // allocates some varibales.
+        // By default it does not have arguments -->> We provide the arguments
         System.out.println(ahsaan.roll); // default is 0 
         // System.out.println(student1);
         System.out.println(ahsaan.name); // default is null
@@ -32,7 +32,7 @@ class Student2{
     String name;
     float marks;
     // constructor for student 2
-    // this--> when ever we try to access the particular item of the class via its object 
+    // this-->> when ever we try to access the particular item of the class via its object 
     // we use this keyword
     Student2(){
         this.rollNo = 21;   // rahul.rollNo is
