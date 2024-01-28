@@ -12,15 +12,15 @@ public class Static {
         // ahsan shall give the population as 2
         // System.out.println(danish.population);
         System.out.println(Humam.population); // 2
-        // such properties that are not really releated to objects but are common to all
+        // such properties that are not really related to objects but are common to all
         // the objects of that class
-        // is known as static like population example.
+        // is known as static like population.
 
         System.out.println(ahsaan);
         System.out.println(danish);
 
     }
-    // for non static an object is needed of needed
+    // for non static an object is needed of needed.
 
     static void fun() {
         Static obj = new Static();
@@ -28,7 +28,7 @@ public class Static {
     }
 
     void message() { // non static member belongs to an instance
-        // fun(); // we can have static method inside the non-static method
+        // fun(); // we can have static method inside the non-static method.
         System.out.println("Hello:");
     }
     /**
@@ -47,11 +47,9 @@ public class Static {
      * we should be able to run this main function withoud the object is being
      * created and that is why its static (thus if
      * static is not present we have to create an object to run the main)
-     * <=>> Non-Static methods can not be referenced frpm the static method, meaning
+     * <=>> Non-Static methods can not be referenced from the static method, meaning
      * inside a static method we cannot use
-     * anything that is not static.
-     * =>> we know that something which is not static belongs to an object, hence
-     * 
+     * anything that is not-static.
      */
 }
 // Instance variables are non-static variables that are defined in a class

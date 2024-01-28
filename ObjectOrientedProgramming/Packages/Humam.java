@@ -16,7 +16,7 @@ public class Humam {
 
     static void message() {
         // System.out.println(this.age);
-        // we can not use this keyword in static context
+        // we can" not use this keyword in static context"
         // this actually represents to an object, and static is does not depend on the
         // object, so how can we use
         // something that depends on the object with something that does not depend on

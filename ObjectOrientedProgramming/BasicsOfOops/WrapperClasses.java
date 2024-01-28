@@ -13,7 +13,7 @@ public class WrapperClasses {
          * The wrapper classes in java are used to convert "primitive data types to
          * objects"
          * int --> wrapper class is "Integer"
-         * booleadn --> wrapper class in Boolean
+         * boolean --> wrapper class in Boolean
          * 
          */
 
@@ -58,8 +58,8 @@ public class WrapperClasses {
      * -->>Garbage Collection in java-->><>Java does not allow to destroy objects manually.
      * so we tell java to do these things when ever you decide to destroy object
      * that is done by finalize.
-     * Finalize-->> it is called by the garbage collector just before the object is
-     * to be destroyed, this method is used to perform any necessary clean up
+     * Finalize-->> it is called by the garbage collector "just before the object is
+     * to be destroyed", this method is used to perform any necessary clean up
      * before the object is destroyed.
      */
 

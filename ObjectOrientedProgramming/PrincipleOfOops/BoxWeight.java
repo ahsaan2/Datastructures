@@ -5,11 +5,12 @@ public class BoxWeight extends Box {
     double weight = -1;
 
     public BoxWeight() {
+        // super();
         this.weight = -1;
     }
 
     // Below classes know what classes are above but above classes doesn't know
-    // what classes properties are below.. that is parent class does not know what is in the
+    // what class properties are below.. that is parent class does not know what is in the
     // child class, But child class does know what is in the parent class
 
     public BoxWeight(double length, double width, double height, double weight) {
@@ -25,6 +26,10 @@ public class BoxWeight extends Box {
         // this.width = width;
         // this.weight = weight;
         // this.height = height;
+    }
+    BoxWeight(double side, double weight){
+        super(side);
+        this.weight = weight;
     }
 
 }
