@@ -10,9 +10,8 @@ public class Box {
     // constructor for Box
     Box() {
         super(); // does not refer to anything here, because it is in the parent class
-        // calls the Object class, Every single class we create has the Object as its
-        // superclass
-        // -->> super>>=> to call the constructor to call the Object class
+        // Every class has object as a super class.
+        // -->> super>>=> call the constructor to call the Object class
 
         this.length = -1;
         this.height = -1;
