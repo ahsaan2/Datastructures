@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package ObjectOrientedProgramming.BasicsOfOops;
 
 public class OopsDocumentation1 {
 
