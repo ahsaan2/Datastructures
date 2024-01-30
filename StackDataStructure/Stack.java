@@ -13,7 +13,7 @@ class StackOverFlowException extends Exception {
 
     // create another constructor that takes the arguments
     public StackOverFlowException(String message) {
-        super(message); // takes the message present in the isFull 
+        super(message); // takes the message present in the isFull
 
     }
 }
@@ -115,4 +115,13 @@ public class Stack {
  * block to handle it.
  * Example of error is: StackOverFlow(Occurs due to the infinite recursion) is a
  * buffer overflow error.
+ */
+/**
+ * (Q) Explain why stack is a recursive data structure?
+ * -->> Recursion is implemented using stack because activation records are to
+ * be stored in the last in first order.
+ * Each time the recursion call ends and the elements stored in the recursive
+ * stack, gets called that are taken as last in and last out, so this
+ * means that we get the last value of the recursive call first and then the
+ * above recursive calls will follow.
  */
