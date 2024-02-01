@@ -6,60 +6,69 @@ public class ObjectClass {
     int num;
     float number;
 
+    public ObjectClass(int num) {
+        this.num = num;
+    }
+
     public ObjectClass(int num, float number) {
         this.num = num;
         this.number = number;
     }
 
-    public ObjectClass(int num) {
-        this.num = num;
-    }
-
-    // create a functions for hashcode
+    // create a method for hashcode --> hashCode gives us the random integer value
+    // of the numbers
     @Override
-    public int hashCode() { // hashcode gives us some random integer value.
-        return super.hashCode(); // will override the parent hashcode function
+    public int hashCode() {
+        return super.hashCode(); // will override the java hashcode method
     }
-    // @Override
-    // public boolean equals(Object obj){
-    // return super.equals(obj);
-    // }
 
-    /// equals
+    // equals
+    // @Override
+    // public boolean equals(Object obj) {
+    // return super.equals(obj);
+
+    // }
     @Override
     public boolean equals(Object obj) {
-        return this.num == ((ObjectClass) obj).num; // casting, it will now check for the content
+        return this.num == ((ObjectClass) obj).num;
     }
 
     public static void main(String[] args) {
-        ObjectClass obj = new ObjectClass(1);
-        // print the hashcode value for first object
-        System.out.println(obj.hashCode()); // it will give us some random integer value
-        ObjectClass obj1 = obj;
-        // same objects will give us the same hashCode values but for the different
-        // objects we will get different values
-        System.out.println(obj1.hashCode());
+        ObjectClass obj = new ObjectClass(12);
+        System.out.println(obj.hashCode()); // will give the hashcode integer value of the obj
+        ObjectClass obj1 = new ObjectClass(12);
+        System.out.println(obj1.hashCode()); // will give us the hashcode integer value of the obj1
+        // if the number or value of the objects is same, we get the different hashcode
+        // value, because hashcode checks for if the object is same then the hashcode
+        // value will be same.
+        // for same objects the hashcode value will be same
         ObjectClass demo = new ObjectClass(12);
-        ObjectClass demo2 = demo;
-
-        if (demo == demo2) { // this check whether these variables are pointing to the same object or not
-            System.out.println("The reference of both the objects is same:");
-        }
-
-        if (demo.equals(demo2)) { // check the content of these objects
-            System.out.println("Both are objects have the same content present");
+        // ObjectClass demo1 = new ObjectClass(12);
+        ObjectClass demo1 = demo;
+        ObjectClass demo3 = new ObjectClass(12);
+        if (demo == demo1) { // compares memory reference of the objects in heap
+            System.out.println("The memory in the heap for both the objects is same:");
         } else {
-            System.out.println("Content is not equal:");
+            System.out.println("Heap memory is not same for the objects:");
         }
-        // both the if conditions are false
+        if (demo.equals(demo3)) {
+            System.out.println("The contents of both the objects is same:");
+
+        } else {
+            System.out.println("The content of the object is different:");
+        }
     }
 
 }
-/**
- * Both equals() method and == are used to compare two objects in java. But ==
- * operator compares reference or memory location of objects in the heap,
- * whether they point to the same location or not.
- * // if we compare two same objects with the == operator then we get a true ,
- * but we have to compare the content they posses is same then we use .equals()
- * method
+/*
+ * == operator & equals() method -->> Both are used to compare the objects in
+ * java. == is a operator and equals() is a method
+ * == operator compares the reference or the location of the object in the heap
+ * memory, whether they point to the same memory.
+ * -->> when ever a new object is created using new , it will create a new
+ * memory location for that object. so we use == operator to check the memory
+ * location of the object if they are same or not
+ * -->> If we have to compare the content they posses then we use the equals()
+ * method.
+ * 
  */
