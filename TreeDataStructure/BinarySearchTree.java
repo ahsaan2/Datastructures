@@ -122,6 +122,7 @@ public class BinarySearchTree {
         // display the left child
         display(node.left, "This is on the left side of:" + node.value + "->");
         display(node.right, "This is on the right side of:" + node.value + "->");
+        System.out.println();
     }
 
     // suppose we are given a sorted array and we do not want to make a skewed tree.
@@ -143,6 +144,61 @@ public class BinarySearchTree {
         populateSorted(nums, 0, mid);
         populateSorted(nums, mid + 1, nums.length);
 
+    }
+
+    /**
+     * 
+     * Pre-Order traversal -->> Node -->> left -->> right
+     * pre means the root node, as only have the root
+     * that we know of , this means something is done pre or first.
+     */
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    private void preOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        // if node is not null print the root value or the first value
+        System.out.println(node.value);
+        // then go tot the left and then go to the right
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    // inOrder -->> node will be in the left and right
+    // first print the left side and then the node and after that print the right
+    // side
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        // print the left side
+        inOrder(node.left);
+        System.out.println(node.value + " ");
+        // print the right side
+        inOrder(node.right);
+    }
+
+    // postOrder-->> first print the left side then the right side and at last the
+    // node
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    private void postOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        // print the left, right side
+        preOrder(node.left);
+        preOrder(node.right);
+        System.out.println(node.value + " ");
     }
 
 }
