@@ -41,18 +41,24 @@ public class BinarySearchTree {
             this.value = value;
         }
 
+    }   
+    public int height(){
+        return height(root);
     }
 
     // height of the tree
-    public int height(Node node) {
+    private int height(Node node) {
         if (node == null) {
             return -1;
         }
         return node.height;
+    }   
+    public boolean isEmpty(){
+       return isEmpty(root);
     }
 
     // check if the tree is empty or not
-    public boolean isEmpty(Node node) {
+    private boolean isEmpty(Node node) {
         return root == null;
     }
 
@@ -122,7 +128,6 @@ public class BinarySearchTree {
         // display the left child
         display(node.left, "This is on the left side of:" + node.value + "->");
         display(node.right, "This is on the right side of:" + node.value + "->");
-        System.out.println();
     }
 
     // suppose we are given a sorted array and we do not want to make a skewed tree.

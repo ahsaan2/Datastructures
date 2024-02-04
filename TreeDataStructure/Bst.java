@@ -8,6 +8,10 @@ public class Bst {
         // int [] nums2 = {1,2,3,4,5,6,7,8,9};
         // tree.populateSorted(nums2);
         tree.display();
+        
+        System.out.println(tree.isBalanced());
+        System.out.println(tree.isEmpty());
+        System.out.println(tree.height());
         // tree.preOrder();
         // tree.postOrder();
         // tree.inOrder();
