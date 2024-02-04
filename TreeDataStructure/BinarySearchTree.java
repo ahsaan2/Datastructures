@@ -1,0 +1,148 @@
+package TreeDataStructure;
+
+public class BinarySearchTree {
+    /**
+     * Binary search tree follows some order to arrange the elments.
+     * here the value of the left node is less than the value of the parent node and
+     * the value of the right node is greater than the value of the parent node
+     * the child nodes must be also in the same order.
+     */
+    /**
+     * ---- ADVANTAGES OF THE BINARY SEARCH TREE -----
+     * 1. Searching in the Binary Search Tree is easy as we always have a hint that
+     * "which subtree has the desired element".
+     * 2. As compared to Array and Linked list the Insertion and Deletion operations
+     * are faster in BST.
+     */
+    /**
+     * ------Suppose the data elements are - 45, 15, 79, 90, 10, 55, 12, 20,
+     * 50--------
+     * First, we will insert the 45 as root node
+     * Then we will check if the next element is less then the root node and we
+     * insert it as left child(15), ans move to the next element.
+     * Otherwise, if the element is larger we insert it in the right side of the
+     * root node(79).
+     */
+
+    // Balanced tree-->> Height of any two nodes should be less than equal to 1.
+    public BinarySearchTree() {
+
+    }
+
+    private Node root;
+
+    public class Node {
+        int value;
+        Node left;
+        Node right;
+        int height;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+    }
+
+    // height of the tree
+    public int height(Node node) {
+        if (node == null) {
+            return -1;
+        }
+        return node.height;
+    }
+
+    // check if the tree is empty or not
+    public boolean isEmpty(Node node) {
+        return root == null;
+    }
+
+    // check if the tree is balanced or not
+    public boolean isBalanced() {
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node node) {
+        // if the node is null
+        if (node == null) {
+            return true;
+        }
+        // check for the balanced, ge the absolute height first of the root node and the
+        // sub nodes of the tree
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && isBalanced(node.left) && isBalanced(node.right);
+
+    }
+
+    // create the insert
+    public void insert(int value) {
+        root = insert(root, value); // root node of the tree will give us the entire tree
+    }
+
+    private Node insert(Node node, int value) {
+        // if we find the null, then we create a new node that is to be added
+        if (node == null) {
+            // create a new node
+            node = new Node(value);
+            return node;
+        }
+        // check if the node is to be added on the left side
+        if (value < node.value) { // if value that is now present is less the the node value then insert at the
+                                  // left side
+            node.left = insert(node.left, value);
+        }
+        if (value > node.value) {
+            node.right = insert(node.right, value);
+        }
+        // as we keep on adding the nodes, the height of the tree is changed
+        node.height = Math.max(height(node.left), height(node.right) + 1);
+        // return the node that gets connected and this will get at last from the
+        // function call we have , insert
+        return node;
+
+    }
+
+    // populate the tree providing the array
+    public void populate(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            // keep inserting the nums at index i
+            this.insert(nums[i]);
+        }
+    }
+
+    // display the nodes
+    public void display() {
+        display(this.root, "This is the root node:"); // display the root node
+    }
+
+    private void display(Node node, String details) {
+        // if no node is present just return
+        if (node == null) {
+            return;
+        }
+        System.out.println(details + node.value);
+        // display the left child
+        display(node.left, "This is on the left side of:" + node.value + "->");
+        display(node.right, "This is on the right side of:" + node.value + "->");
+    }
+
+    // suppose we are given a sorted array and we do not want to make a skewed tree.
+    // we take the middle element at sort in that manner
+    // 1 2 3 4 5 6 7 8 9
+    public void populateSorted(int[] nums) {
+        populateSorted(nums, 0, nums.length);
+    }
+
+    private void populateSorted(int[] nums, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        // else find the mid
+        int mid = start + end / 2;
+        // insert middle node as root node
+        this.insert(mid);
+        // populate the left and then right
+        populateSorted(nums, 0, mid);
+        populateSorted(nums, mid + 1, nums.length);
+
+    }
+
+}

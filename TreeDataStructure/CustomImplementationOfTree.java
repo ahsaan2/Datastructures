@@ -45,7 +45,6 @@ public class CustomImplementationOfTree {
         root = new Node(value);
         // now populat the root recursively, it will have the left and right
         populate(scanner, root);
-
     }
 
     private void populate(Scanner scanner, Node node) {
