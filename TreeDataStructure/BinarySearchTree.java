@@ -41,8 +41,9 @@ public class BinarySearchTree {
             this.value = value;
         }
 
-    }   
-    public int height(){
+    }
+
+    public int height() {
         return height(root);
     }
 
@@ -52,9 +53,10 @@ public class BinarySearchTree {
             return -1;
         }
         return node.height;
-    }   
-    public boolean isEmpty(){
-       return isEmpty(root);
+    }
+
+    public boolean isEmpty() {
+        return isEmpty(root);
     }
 
     // check if the tree is empty or not
@@ -204,6 +206,30 @@ public class BinarySearchTree {
         preOrder(node.left);
         preOrder(node.right);
         System.out.println(node.value + " ");
+    }
+
+    /**
+     * Search the item-->> If the item we are searching for is less than the root
+     * node then we go and search in the left side of the root and if the item we
+     * are searching
+     * for is greater then the root node then we go and search in the right side of
+     * the root
+     * 
+     */
+    public boolean search(Node root, int key) {
+        if (root == null) {
+            return true;
+
+        }
+        if (root.value == key) {
+            return true;
+        }
+        if (root.value < key) {
+            return search(root.left, key);
+        } else if (root.value > key) {
+            return search(root.right, key);
+        }
+        return false;
     }
 
 }
