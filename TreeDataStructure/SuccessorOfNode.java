@@ -4,6 +4,9 @@ import javax.swing.tree.TreeNode;
 
 public class SuccessorOfNode {
     // given the key and find the successor of the node in the tree
+    class Node{
+        
+    }
 
 }
 

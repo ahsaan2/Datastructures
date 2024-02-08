@@ -9,6 +9,15 @@ import javax.management.Query;
 import javax.swing.tree.TreeNode;
 
 public class BFS {
+    class TreeNode{
+        int value;
+        TreeNode left;
+        TreeNode right;
+        public TreeNode(int value){
+            this.value = value;
+        }
+
+    }
 
     /**
      * Breadth first search or level first search -->> it is used to search a graph
