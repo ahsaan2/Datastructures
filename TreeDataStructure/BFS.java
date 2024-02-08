@@ -2,19 +2,20 @@ package TreeDataStructure;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+// import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import javax.management.Query;
-import javax.swing.tree.TreeNode;
+// import javax.management.Query;
+// import javax.swing.tree.TreeNode;
 
 public class BFS {
     class TreeNode{
-        int value;
+        int val;
         TreeNode left;
         TreeNode right;
         public TreeNode(int value){
-            this.value = value;
+            this.val = value;
         }
 
     }
