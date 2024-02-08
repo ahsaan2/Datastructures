@@ -62,6 +62,7 @@ public class BFS {
             // every level will have a current level list
             List<Integer> current_level = new ArrayList<>();
             for (int i = 0; i < levelSize; i++) {
+                // for loop maintain's how many elements are there in a level
                 // get me the current node
                 TreeNode currTreeNode = queue.poll(); // removes 1
                 // we will get the first node, and we put that in the current level
