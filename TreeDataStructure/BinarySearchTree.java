@@ -210,10 +210,8 @@ public class BinarySearchTree {
 
     /**
      * Search the item-->> If the item we are searching for is less than the root
-     * node then we go and search in the left side of the root and if the item we
-     * are searching
-     * for is greater then the root node then we go and search in the right side of
-     * the root
+     * node then we go and search in the left side of the root and if the item we are searching
+     * for is greater then the root node then we go and search in the right side of the root
      * 
      */
     public boolean search(Node root, int key) {
