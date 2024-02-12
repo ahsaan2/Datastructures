@@ -62,4 +62,12 @@ public class TreeIntroduction {
      * 
      * 
      */
+
+      /**
+     * Deque:->(is a interface) A linear collection that supports insertion and deleteion at both ends.
+     * The name is short for double-ended-queue.
+     * offerFirst, peekFirst, pollFirst -->> these operations occur at the front of the deque.
+     * offerLast, peekLast, pollLast -->> these operations occur at the end of the deque.
+     * 
+     */
 }

@@ -210,8 +210,10 @@ public class BinarySearchTree {
 
     /**
      * Search the item-->> If the item we are searching for is less than the root
-     * node then we go and search in the left side of the root and if the item we are searching
-     * for is greater then the root node then we go and search in the right side of the root
+     * node then we go and search in the left side of the root and if the item we
+     * are searching
+     * for is greater then the root node then we go and search in the right side of
+     * the root
      * 
      */
     public boolean search(Node root, int key) {
@@ -229,6 +231,26 @@ public class BinarySearchTree {
         }
         return false;
     }
-    
 
 }
+/**
+ * BSt -->> Important point -->> If the one of the node value in the right sub
+ * tree of the tree is less than the root node, no matter if it is in the left
+ * side of the node of the right side of root node.
+ * That means if we have a value less then the root node at any point in the
+ * right sub-tree, the tree is not a binary search tree.
+ * (Q) how can we say that the tree is BST?
+ * -->> If we check for any root node , what is the "largest" item in the left
+ * sub-tree and
+ * -->> also if we check what is the "smallest" item in the right-subtree,
+ * satisfying the condition that the "largest node value
+ * in the left sub-tree should be less than the root value" and similarly, the
+ * "smallest value on the right subtree should be greater then the rootnode
+ * value".
+ * If this condition is satisfied then we have a BST.
+ * 
+ * Also if there is a single root node that has no left sub-tree and no right
+ * sub-tree that
+ * is also called as a BSt and also if no node/root is present that is also
+ * called a BST.
+ */
