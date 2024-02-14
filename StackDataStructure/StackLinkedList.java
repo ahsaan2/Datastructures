@@ -21,7 +21,7 @@ public class StackLinkedList {
      * -->> because adding and removing the elements at the head is in the Order(1).
      * We use the linked list when the size of the stack is not known in advance-->
      * in LL there is no limitations on the number of nodes we create.
-     * Push()--> this must function in the similar fashion as how we add the node in
+     * Push()--> this must function in the similar way as how we add the node in
      * the linked list.
      * pop()-->> should be like we remove the node in the linked list
      * 
