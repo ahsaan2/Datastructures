@@ -1,6 +1,5 @@
 package StringBuffer;
 
-import java.rmi.StubNotFoundException;
 import java.util.Arrays;
 
 public class Main {
