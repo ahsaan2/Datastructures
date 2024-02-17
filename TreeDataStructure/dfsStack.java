@@ -26,7 +26,8 @@ public class dfsStack {
             Stack<Node> stack = new Stack<>();
             // push the root node into the stack
             
-            stack.add(0, node.value);
+            //  stack.add(0, node.value);
+            
             // print the value of the root node
             while (!stack.isEmpty()) {
                 Node removed = stack.pop();

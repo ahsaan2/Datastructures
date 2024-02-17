@@ -3,7 +3,7 @@ package TreeDataStructure;
 public class DeleteNodeInBSt {
     // given the BSt we have to delete a node and return the tree in such a way that
     // the property of the binary search tree is maintained.
-    private Node root;
+     Node root = null;
 
     class Node {
         Node left;
@@ -14,6 +14,7 @@ public class DeleteNodeInBSt {
         public Node(int value, int data) {
             this.value = value;
             this.data = data;
+
         }
 
     }
