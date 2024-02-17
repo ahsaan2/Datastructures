@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming;
+package ObjectOrientedProgramming.PrincipleOfOops;
 
 public class ObjectClass {
     // Object class is the root of the class heirarchy, it is the top most class in
