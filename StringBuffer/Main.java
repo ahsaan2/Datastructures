@@ -7,6 +7,11 @@ public class Main {
   public static void main(String[] args) {
     StringBuffer sb = new StringBuffer();
     StringBuffer sb1 = new StringBuffer();
+    StringBuffer sb2 = new StringBuffer();
+    sb2.append("ahsaan");
+    
+    sb2.replace(0, 6  , "lone");
+    System.out.println(sb2.toString());
     System.out.println(sb1.capacity());   // the default capacity is 16 for the stringbuffer.
     // every single buffer has a capacity, and till that capacity does not exceed, there is no need to
     //allocate a new buffer array.If the internal buffer overflows it is automatically made larger.
@@ -25,7 +30,7 @@ public class Main {
 /**
  * stringBuffer-->> mutable sequence of characters.
  * StringBuffer -->> is mutable.
- * StringBudders are thread-safe, the methods are synchronized.
+ * StringBudders are "thread-safe", the methods are "synchronized".
  * The principal operations on the stringBuffer are code insert and code append methods.
  * thread -->>  a single sequential flow of control within a program(or a small unit of processes).
  * threadSafety-->> Suppose when one thread is working on some data, and it will prevent any other
@@ -33,4 +38,4 @@ public class Main {
  * append-->> always adds these characters at the end of the buffer.
  * insert-->> adds characters at a specified buffer.
  */
-// stringBuilder-->> not thread safe, thus works faster then the stringBuffer.
+// stringBuilder-->> "not-thread safe", thus works "faster" then the stringBuffer.
