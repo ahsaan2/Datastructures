@@ -12,7 +12,7 @@ public class Heap<T extends Comparable<T>> {
   }
 
   // we have to swap items
-  private void swap(int first, int second) {
+  private void swap(int first, int second) { // 34, 45, 22, 67, 33
     T temp = list.get(first);
     list.set(first, list.get(second));
     list.set(second, temp); // set second as temp.
@@ -112,6 +112,7 @@ public class Heap<T extends Comparable<T>> {
     // heap sort
     ArrayList<Integer> list = heap.heapSort();
     System.out.println(list);
+    // priorityQueue-->> we have priority such as (max item(maxHeap) and min item(minHeap)).
   }
 }
 /**
