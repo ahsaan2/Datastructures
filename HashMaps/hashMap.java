@@ -2,6 +2,8 @@ package HashMaps;
 
 public class hashMap {
 
+  // map is an interface and hashmap is the class of the java collection framework.
+
   public static void main(String[] args) {
     // get the hashcode of ahsaa
     String name = "ahsaan";
@@ -49,8 +51,8 @@ public class hashMap {
  -----------------------------COLLISION---------------------------------------------------
  The situation where the newly inserted key-maps to an already occupied slot in 
  the hash-table is called collision.
- --->> Techiniques to resolve collision----<<
- 1. chaining-->> If the same key occur at the same array of nodes, we convert it into the linkedlist.
+ ----------------------------------->> Techiniques to resolve collision----------------------------------------------d<<
+ 1. "chaining"-->> If the same key occur at the same array of nodes, we convert it into the linkedlist.
  Now we check in linedList if the key is already present, if the key is present then we "update the value" of the key and suppose
  if key was present then we now have two values at the key. and if the key was not present in the linkedList then we
  add a new node.
@@ -66,5 +68,19 @@ particular linked list.
  * default load-factor is 75 % of capacity. suppose the initial capacity is 100 and the moment no.of elements > 75 , it
  * doubles the size.
  * -->> Rehashing -->> it is used to keep the average number of elements less so, that we can traverse in the constant time.
+ */
+/**
+ * -------------------------------->>2.Open-Addressing<<------------------------------------
+ * 1).Here we have only one item per slot.
+ * -->> We do not make the linkedList, if we get the hashvalue and that value is already present,
+ * we insert the item at the next available slot.(this is also known as Linead addressing)
+ * --->>"(h of k for the ith time)"
+ * (h,i) = Linear probing (H(K)+ i) % M
+ * -->> In linear addressing we can form a cluster, so we can use double hashing tor emove this
+ * We use probe-->> the number of attemts.
+ * 2).Double hashing-->>Two hashfunctions are used.
+ * (H(k,i)) = (h(k) + i * (h2(k))) % M
+ *
+ * ---->>> Uniform hashing assumptions-->> Every key is equally, likelly to have m! permutations
  *
  */
