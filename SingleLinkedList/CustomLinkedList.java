@@ -200,3 +200,21 @@ public class CustomLinkedList<Ttype> {
         System.out.println("null");
     }
 }
+/**
+ * ------------Traversal in the linked list for removing Nth last ndoe from the linked list---------------------
+ * // we start from the dummy node having two pointers
+ * ListNode slow = dummy;
+ * ListNode fast = dummy;
+ * // we move the fast pointer n steps in the linked list
+ * for(int i =0; i < n; i++){
+ * fast = fast.next
+ * }
+ * // and now we move both the poits one by one, till the next of fast is null
+ * while(fast.next != null){
+ * slow = slow.next;
+ * fast = fast.next;
+ * }
+ * // now the next node of the slow pointer is the n and is to be removed
+ * slow.next = slow.next.next;
+ * 
+ */
