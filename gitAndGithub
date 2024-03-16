@@ -10,3 +10,20 @@ git add .
 2. copy the commit
 3.git reset paste(copied commit)
 // this command will unstage the previous changes
+-------------------------------------------------------------------
+-->> After creating a new repository in the gitHub
+-->> the URl of the repository is to be attached to the project
+-->> command => git remote add origin paste the url
+-->> removte means that we are working with the URL's
+-->> add means, we are adding a new url
+-->> origin means the name of the url we are going to add
+-------------------------------------------------------------------
+-->> git remove -v
+-->> shows all the url's that are attached to the folder
+origin  https://github.com/ahsaan2/Datastructures.git (fetch)
+origin  https://github.com/ahsaan2/Datastructures.git (push)
+--------------------------------------------------------------------
+     what are Branches in  gitHub
+     -->> In simpler terms a git branch are individual projects within a git repository.
+     it is a new or seperate version of the main repository.
+
