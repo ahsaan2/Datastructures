@@ -1,0 +1,12 @@
+Git --> allows us to maintain the history of the project, at what particular point of time which person made which change where in the project.
+GitHub --> is a platform that allows us to host our git repositories(folder where all the changes are saved).
+-->> Staging the change
+git add .
+--> . means everything in the current directly that is untraced.
+ git status -->> tells us that if we have made any change or not, it shows the modified files etc
+-->> command used to see the entire history of the project all the commits that where made >> git log
+-->> What even commit we copy all the commits above it will be removed by
+1. get the log of the project
+2. copy the commit
+3.git reset paste(copied commit)
+// this command will unstage the previous changes

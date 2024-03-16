@@ -1,6 +1,6 @@
 package TreeDataStructure;
 
-public class TreeIntroduction {
+public class TreeIntroduction{
     /**
      * Trees are similar to linked lists, but each node points to a number of nodes.
      * --> Trees represent the "heirarchical nature of a structure in a graphical"
