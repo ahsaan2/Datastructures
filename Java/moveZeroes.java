@@ -22,7 +22,7 @@ public class moveZeroes {
     // given an array move the zeroes to the end of the array
     public static void print(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+" ");
+            System.out.print(arr[i] + " ");
         }
     }
 
