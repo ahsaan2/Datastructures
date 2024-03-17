@@ -1,3 +1,4 @@
+package PractiseQuestion;
 
 // import StackDataStructure.Stack;
 import java.util.Stack;

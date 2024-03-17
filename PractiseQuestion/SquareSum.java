@@ -1,3 +1,4 @@
+package PractiseQuestion;
 
 class SquareSum {
     public static int[] sortedSquare(int[] nums) {
