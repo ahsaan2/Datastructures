@@ -1,0 +1,2 @@
+Variables -->> data is stored permenantly in the database, but during processing the data needs to be stored temporary and for that temporary storage we use variables
+
