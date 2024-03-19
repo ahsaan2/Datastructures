@@ -108,7 +108,7 @@ public class CustomLinkedList<Ttype> {
             Node previous = head;
             int i = 0;
             while (i < index && current != null) {
-                current = previous;
+                current = previous; // previous will be one step less than the current
                 current = current.next;
                 i++;
             }
@@ -152,7 +152,7 @@ public class CustomLinkedList<Ttype> {
             current = current.next;
 
         }
-        // Our previous pointer will be at what we can tail -1 and we can update the next or reference of previous as null and 
+        // Our previous pointer will be at what we have a node that is tail -1 and we can update the next or reference of previous as null and 
         // update previous as tail
         prev.next = null;
         tail = prev;
