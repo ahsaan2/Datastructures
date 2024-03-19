@@ -4,7 +4,7 @@ public class singleLinkedList {
     // we have a head
     private Node head;
     private Node tail;
-    private int size;
+    // private int size;
 
     int size(int size) {
         return size;
@@ -55,7 +55,7 @@ public class singleLinkedList {
         if (head == null) {
             // create the node and point that node as both head and tail
             head = tail = node;
-            size += 1;
+            // size += 1;
             // tail.next = null; // so that there will be no loop when we have only one item
 
         }
