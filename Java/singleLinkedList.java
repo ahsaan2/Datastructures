@@ -2,7 +2,7 @@ package Java;
 
 public class singleLinkedList {
     // we have a head
-    private Node head;
+    private  static Node head;
     private Node tail;
     // private int size;
 
@@ -27,7 +27,7 @@ public class singleLinkedList {
     // to display the nodes in the linked list we need to travel each and every node
     // one by one
 
-    public void display() {
+    public void display(Node head) {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + "-->");
@@ -118,20 +118,115 @@ public class singleLinkedList {
 
     }
 
+    // delete first node in the linked list
+    // to delete the first node, we will have the second node as the head and the
+    // previous of that will be null
+    public Node deleteFirst() {
+        if (head == null) {
+            return null;
+        }
+        Node temp = head;
+        head = head.next; // 1 2 3 4
+        // remove the link
+        temp.next = null;
+        return temp;
+
+    }
+
+    // delete the last node in the linked list.
+    // 1 2 3 4 5 6
+    public Node deleteLast() {
+        if (head == null) {
+            return null;
+        }
+        // we have to traverse till the end of the linked list
+        Node previous = head;
+        Node current = head;
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+        // we are at the last node, since we have to remove this only, we need to have
+        // the information
+        // of the previous node we have 1 --> 2 --> 3 --> 4 --> 5
+        // p c
+        previous.next = null;
+        return current;
+
+    }
+
+    // delete a node from the single linked list at a given index
+    public Node deleteAtIndex(int index) {
+        if (index == 0) {
+            return null;
+        }
+        // 1 2 3 4 5
+        // now what do we do, suppode we have to delete the node at index 2
+        // so, we need to have the information about the node previous to the index
+        // node,
+        // and also about the node that is after the index node.
+        Node current = head;
+        Node previous = head;
+        int i = 0;
+        while (i < index && current.next != null) {
+            previous = current;
+            current = current.next;
+            i++;
+        }
+        // now, here our next of the previous node will now point to the next of the
+        // current node
+        previous.next = current.next;
+        return current;
+
+    }
+
+    // how to search an element in java, if the item is found then return true, else
+    // return false
+    public boolean searchNode(int key) {
+        // traverse the linked list
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+
+    }
+
+    // reverse a singly-linkedList
+    public  Node reverse(Node head) {
+        // 3-->4-->5-->6
+        // 3 <--4<--5<--6
+        Node current = head;
+        Node previous = null;
+        Node next = null;
+        while (current != null) {
+            
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            // also our current will be the next
+            current = next;
+        }
+        return previous;
+    }
+
     public static void main(String[] args) {
         singleLinkedList ll = new singleLinkedList();
         // initially the head is null
-        ll.head = new Node(10); // we have a head of value 10
+        singleLinkedList.head = new Node(10); // we have a head of value 10
         // create another node
         Node second = new Node(12);
         Node third = new Node(15);
         Node fourth = new Node(20);
-        ll.head.next = second;
+        singleLinkedList.head.next = second;
         second.next = third;
         third.next = fourth;
         fourth.next = null;
         // display the items
-        ll.display();
+        ll.display(head);
         // length of the linked list
         int length = ll.lengthOfLinkedList();
         System.out.println("The original size of the linked list:" + length);
@@ -139,15 +234,27 @@ public class singleLinkedList {
         ll.insert(8);
         ll.insert(7);
         // 7 -> 8 -> 9
-        ll.display();
+        ll.display(head);
         System.out.println("Nodes after adding at the tail:");
         ll.insertLast(30);
         ll.insertLast(40);
         ll.insertLast(50);
-        ll.display();
+        ll.display(head);
         System.out.println("Insert a node at the given index:");
         ll.insertAtIndex(11, 4);
-
-        ll.display();
+        ll.display(head);
+        // delete the first node/head, since we are returning, we have to return the
+        // data of the node.
+        System.out.println(ll.deleteFirst().data); // 7
+        ll.display(head);
+        System.out.println(ll.deleteFirst().data); // 7
+        ll.display(head);
+        System.out.println(ll.deleteLast().data);
+        ll.display(head);
+        System.out.println(ll.deleteAtIndex(3).data); // 12
+        ll.display(head);
+        System.out.println("The node value is present or not:" + ll.searchNode(15));
+        Node reverseFromHead = ll.reverse(head);
+        ll.display(reverseFromHead);
     }
 }
