@@ -2,7 +2,7 @@ package Java;
 
 public class singleLinkedList {
     // we have a head
-    private  static Node head;
+    private static Node head;
     private Node tail;
     // private int size;
 
@@ -196,14 +196,14 @@ public class singleLinkedList {
     }
 
     // reverse a singly-linkedList
-    public  Node reverse(Node head) {
+    public Node reverse(Node head) {
         // 3-->4-->5-->6
         // 3 <--4<--5<--6
         Node current = head;
         Node previous = null;
         Node next = null;
         while (current != null) {
-            
+
             next = current.next;
             current.next = previous;
             previous = current;
@@ -211,6 +211,23 @@ public class singleLinkedList {
             current = next;
         }
         return previous;
+    }
+
+    // find if the linked list has any duplicate item, if true then remove and
+    // display it
+    public static void duplicate(Node head) {
+
+        Node current = head;
+        while (current != null && current.next != null) {
+            if (current.data == current.next.data) {
+                current.next = current.next.next;
+
+            } else {
+                current = current.next;
+
+            }
+        }
+
     }
 
     public static void main(String[] args) {
@@ -237,8 +254,12 @@ public class singleLinkedList {
         ll.display(head);
         System.out.println("Nodes after adding at the tail:");
         ll.insertLast(30);
-        ll.insertLast(40);
+        ll.insertLast(30);
         ll.insertLast(50);
+        ll.insertLast(50);
+        ll.display(head);
+        singleLinkedList.duplicate(head);
+        System.out.println("The linked list without duplicates:");
         ll.display(head);
         System.out.println("Insert a node at the given index:");
         ll.insertAtIndex(11, 4);
@@ -256,5 +277,14 @@ public class singleLinkedList {
         System.out.println("The node value is present or not:" + ll.searchNode(15));
         Node reverseFromHead = ll.reverse(head);
         ll.display(reverseFromHead);
+
     }
 }
+// floyd's algorithm-> If we have to find the starting point of the loop
+// we will first find if the loop is present or not, if the loop is present
+// then we will have another temp pointer starting from the head, we will keep
+// moving the temp and slow pointer till they meet, and they do meet always at
+// the
+// starting point of the loop
+// So, to remove the loop we will just point the next pointer of theh slow
+// to the null. By this way the loop will be removed.
