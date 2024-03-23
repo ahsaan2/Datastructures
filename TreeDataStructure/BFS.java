@@ -6,9 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-// import javax.management.Query;
-// import javax.swing.tree.TreeNode;
-
 public class BFS {
 
   class TreeNode {
@@ -27,8 +24,7 @@ public class BFS {
    * data structure , similar to tree traversal for a node that meets a set of
    * criteria.
    * It starts from the "root node and visits all nodes at the current depth
-   * level"
-   * before moving on to the nodes at the next depth level.
+   * level" before moving on to the nodes at the next depth level.
    * Here we go level by level.
    * --------------when to use the BFS---------
    * 1. when ever our answer lies near the root of the tree.
@@ -44,8 +40,7 @@ public class BFS {
    * all the child items of the root node in the queue, now since we got all the
    * child nodes of the root node
    * we then "remove the first child of the root node" and "add its children" in
-   * the
-   * queue if present in the queue. We keep this process till the queue gets
+   * the queue if present in the queue. We keep this process till the queue gets
    * "empty"
    * and by this way we access all the items in a level manner.
    */
@@ -78,7 +73,7 @@ public class BFS {
         // get me the current node
         TreeNode currTreeNode = queue.poll(); // removes 1
         // we will get the first node, and we put that in the current level
-        current_level.add(currTreeNode.val); // we keep removing one nod from the queue, and add that node in
+        current_level.add(currTreeNode.val); // we keep removing one node from the queue, and add that node in
         // the current level.
         // as we are removing the node, we are adding its left and right child in the
         // queue
@@ -89,7 +84,7 @@ public class BFS {
           queue.offer(currTreeNode.right);
         }
       }
-      // after this loop gets finisher, we have a curreny level , and we add that in
+      // after this loop gets finisher, we have a current level , and we add that in
       // the main result level we created
       result.add(current_level);
     }

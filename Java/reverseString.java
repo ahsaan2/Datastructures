@@ -1,7 +1,7 @@
 package Java;
 
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 import java.util.Stack;
 
 public class reverseString {
@@ -9,16 +9,20 @@ public class reverseString {
         // reverse a string using stacks
         Stack<Character> stack = new Stack<>();
         String s = "ABCDEF";
-        for (char ch : s.toCharArray()) {
-            stack.push(ch);
+        // covert the string into characters
+        char[] ch = s.toCharArray();
+        for (char c : ch) {
+            stack.push(c);
 
         }
         System.out.println(stack);
-        List<Character> list = new ArrayList<>();
+        // List<Character> list = new ArrayList<>();
 
         for (int i = 0; i < s.length(); i++) {
-            list.add(stack.pop());
+            // list.add(stack.pop());
+            // replaces the character in the characters array one by one
+            ch[i] = stack.pop();
         }
-        System.out.println(list);
+        System.out.println(ch);
     }
 }

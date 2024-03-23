@@ -29,7 +29,7 @@ public class BinarySearchTree {
 
     }
 
-    private Node root;
+    public  Node root;
 
     public class Node {
         int value;
@@ -230,6 +230,25 @@ public class BinarySearchTree {
             return search(root.right, key);
         }
         return false;
+    }
+
+    // find the maximum node value
+    public  int findMax(Node root) {
+        if (root == null) {
+            return Integer.MIN_VALUE;
+        }
+        // now we can check for the left subtree and the right subtree
+        int result = root.value;
+        int left = findMax(root.left);
+        if (left > result) {
+            // update the value of result
+            result = left;
+        }
+        int right = findMax(root.right);
+        if (right > result) {
+            result = right;
+        }
+        return result;
     }
 
 }

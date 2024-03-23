@@ -1,21 +1,22 @@
 package TreeDataStructure;
 
-public class Bst {
+public class Bst extends BinarySearchTree {
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-        int [] nums = {90, 80, 100, 70, 75, 105, 110, 102};
+        int[] nums = { 90, 80, 100, 70, 75, 105, 110, 102 };
         tree.populate(nums);
         // int [] nums2 = {1,2,3,4,5,6,7,8,9};
         // tree.populateSorted(nums2);
         tree.display();
-        
+
         System.out.println(tree.isBalanced());
         System.out.println(tree.isEmpty());
         System.out.println(tree.height());
         // tree.preOrder();
         // tree.postOrder();
         // tree.inOrder();
+        // System.out.println(tree.findMax(root));
 
     }
-    
+
 }
