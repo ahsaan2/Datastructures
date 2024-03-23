@@ -230,6 +230,31 @@ public class singleLinkedList {
 
     }
 
+    // remove the cycle in the linked list if present
+    public void removeLoop(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                removeLoop(slow);
+                return;
+            }
+
+        }
+
+    }
+
+    public void removeloop(Node slow) {
+        Node temp = head;
+        while (slow.next != temp.next) {
+            slow = slow.next;
+            temp = temp.next;
+        }
+        slow.next = null;
+    }
+
     public static void main(String[] args) {
         singleLinkedList ll = new singleLinkedList();
         // initially the head is null
