@@ -25,7 +25,7 @@ public class BubbleSort {
         // have one complete for i loop
         boolean swapped; // we can have a boolean for whether swap occurs or not
         int n = arr.length;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n-1; i++) {
             swapped = false;
             // now for the comparison we will have the j loop
             for (int j = 0; j < n - i - 1; j++) {
