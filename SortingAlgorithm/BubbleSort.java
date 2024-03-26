@@ -23,8 +23,10 @@ public class BubbleSort {
 
         // here after each pass 1 item is at the correct place, that means when we will
         // have one complete for i loop
+        boolean swapped; // we can have a boolean for whether swap occurs or not
         int n = arr.length;
         for (int i = 0; i < n; i++) {
+            swapped = false;
             // now for the comparison we will have the j loop
             for (int j = 0; j < n - i - 1; j++) {
                 // each time we will have one item at its perfect index so , we reduces the
@@ -34,9 +36,15 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    // here the swapping will take place
+                    swapped = true;
 
                 }
 
+            }
+            // if no swapping is done, then we simply break the loop
+            if (!swapped) {
+                break;
             }
 
         }
@@ -51,7 +59,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         BubbleSort sort = new BubbleSort();
-        int[] arr = { 5, 2, 4, 1, 7, 6, 9, 0, 8};
+        int[] arr = { 5, 2, 4, 1, 7, 6, 9, 0, 8 };
         sort.display(arr);
 
         sort.bubbleSort(arr);
