@@ -23,9 +23,9 @@ public class BubbleSort {
 
         // here after each pass 1 item is at the correct place, that means when we will
         // have one complete for i loop
-        boolean swapped; // we can have a boolean for whether swap occurs or not
+        boolean swapped;   // we can have a boolean for whether swap occurs or not
         int n = arr.length;
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
             swapped = false;
             // now for the comparison we will have the j loop
             for (int j = 0; j < n - i - 1; j++) {
@@ -59,7 +59,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         BubbleSort sort = new BubbleSort();
-        int[] arr = { 5, 2, 4, 1, 7, 6, 9, 0, 8 };
+        int[] arr = { 5, 2, 4, 1, 7, 6, 9, 0, 8};
         sort.display(arr);
 
         sort.bubbleSort(arr);
