@@ -23,3 +23,8 @@ public class strings {
     
     }
 }
+/**
+ * Strings in java are Immutable.Once we create the objets we cannot change it.
+ * To have mutable strings, we have two different classes in java.
+ * 
+ */
