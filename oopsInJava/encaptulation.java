@@ -33,6 +33,7 @@ class Human {
 
     public void setName(String name) {
         this.name = name;
+        // this keyword can be used to refer current class instance variable. 
     }
 }
 
