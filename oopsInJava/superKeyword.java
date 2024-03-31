@@ -32,9 +32,10 @@ class B extends A { // Object of B will also call the constructor of A, as A is 
 
 }
 
-public class InheritanceInjvava {
+public class superKeyword {
     public static void main(String[] args) {
         B obj1 = new B(1);
+        System.out.println(obj1);  // hashvalue
         // B obj = new B();
         // when we call the default constructor, it will go first to B default
         // constructor
