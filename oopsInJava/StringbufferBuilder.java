@@ -2,12 +2,12 @@ package oopsInJava;
 
 public class StringbufferBuilder {
     public static void main(String[] args) {
-        StringBuffer sb = new StringBuffer("hello");
+        StringBuffer sb = new StringBuffer("hello");  // capacity becomes 16 + 5
         // string buffer will have a string that will be mutable.
         System.out.println(sb.capacity());
         // The default capacity of the stringBuffer will be 16.
         StringBuffer sb2 = new StringBuffer("hello"); // 5 characters, total =21
-        // if we now want to lool for the capacity we will get 21, it will store 5 character ans give 16 character space extra.
+        // if we now want to look for the capacity we will get 21, it will store 5 character ans, give 16 character extra space.
         System.out.println(sb);
         // append
         sb2.append(" & Welcome");
@@ -23,15 +23,14 @@ public class StringbufferBuilder {
     
 }
 /**
- * If we want to have mutable string, and thats why we have two different classes in java.
+ * If we want to have mutable string, and for that we have two different classes in java.
  * StringBuffer:-> A thread-safe. StringBuffer are safe for the use of multile threads. The methods are synchronized.
  * A thread in java is the direction or the path that is taken while a program is executed.
  * The principal operation of the string buffer is append() and insert.
- * append()-->> adds at the end of the string
+ * append()-->> adds at the end of the string.
  * insert()-->> insert at the particular index.
  * ----------------------------------------------------------------------------------------------------------------
  * StringBuilder:-> The only difference between is StringBuilder is not thread-safe.
- * These are not thread-safe.
  * Thus StringBuilder are faster than the StringBuffer.
  * These have same methods as that of the StringBuffer.
  * 

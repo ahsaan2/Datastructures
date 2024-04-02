@@ -41,13 +41,12 @@ public class inheritanceInJava {
 }
 // java supports single level inheritance, multi-level inheritance
 // -->> multi-level inheritance=>when we have a class that is getting inherited
-// by something else, ans it itself is getting inherited
+// by something else, and that class is itself getting inherited
 // by something else.
 // (parent(A) --> child(B)(this becomes now parent) --> child).
 // -->> Java does not support multiple inheritance.(because of the ambiguity,
 // suppose if the two parent class has the same method
 // and we call the method. Java gets confused which method to choose.)
-// java does not support multiple inheritance
 
 /**
  * what ever property your parents have ,its yours also

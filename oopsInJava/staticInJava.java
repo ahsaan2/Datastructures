@@ -7,7 +7,7 @@ class Mobile {
     int price;
     // if we want to make the name variable common to all the objects we can use
     // static
-    static String name;
+    static String name; // name will be now common to all
 
     public void show() {
         System.out.println(brand + " : " + price + " : " + name);
@@ -28,7 +28,7 @@ class Mobile {
 
     static { // static block , used to initialize the static variables.
         name = "name";
-        System.out.println("in static block:");
+        System.out.println("In static block:");
     }
     // we can see that constructor is called 2 times and static is called only once,
     // also static is called first.
@@ -47,32 +47,36 @@ class Mobile {
         public static void main(String[] args) {
             // If we want to load the class without creating the object
             // and for that we have a special class inside java called as
-            // class Class.forName(className);
+            // Class.forName(className);
             // Class.forName("Mobile"); // forName is a method which loads your class
-
+            System.out.println(
+                    "Once we create the object of the Mobile class, constructor will be called and also static block will be called first:");
+            // class classname for name
+            // Class.forName("Mobile"); // throws exception classNotFoundException
             Mobile obj = new Mobile();
             obj.brand = "apple";
             obj.price = 12345;
             // obj.name = "smart phone";
             Mobile.name = "smart phone";
 
-            // static variables shoul be called with their class name. not by their object
+            // static variables should be called with their class name. not by their object
             // name
             // creating another object for the same mobile
             Mobile obj2 = new Mobile();
             obj2.brand = "Samsung";
             obj2.price = 213242;
             // obj2.name = "m21";
-            Mobile.name = "m21";
+            Mobile.name = "m21"; // calling a static variable is done through the use of class name and not the
+                                 // object name.
 
             // obj.name = "phone";
             Mobile.name = "phone";
 
-            // static variables are basically shared by all the objects.
-            // print
-            obj.show(); // values of object 1
-            obj2.show(); // values of object 2
-            Mobile.print();
+            // // static variables are basically shared by all the objects.
+            // // print
+            // obj.show(); // values of object 1
+            // obj2.show(); // values of object 2
+            // Mobile.print();
             // we can call static methods, variables directly with the help of class Name
         }
     }

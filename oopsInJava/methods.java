@@ -2,7 +2,11 @@ package oopsInJava;
 
 class computer {
     // if we have a variable here, it becomes our instance varibale
-    // int num1; variable in the class but outside the method
+    int num1 = 10; //variable in the class but outside the method
+    // Instance variables are created inside the heap memory and they are tha part of the object they belong to
+    void show(){
+        System.out.println(num1);
+    }
     // in a class we can define the behavior
     public void playMusic() {
         // define the befavior of the method
