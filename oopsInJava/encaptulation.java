@@ -1,7 +1,7 @@
 package oopsInJava;
 
 class Human {
-    // we declare two variables, and to acheive encaptulation we make them private
+    // we declare two variables, and to acheive encaptulation "we make them private."(hide tha variables or data members)
     private int age;
     private String name; // we can also assign the values, using set method
     // Encaptulating the age and name.
@@ -13,8 +13,7 @@ class Human {
 
     // getter
     // here we are accessing the variables through methods, and no one from the
-    // outside world
-    // can access these variables, this is known as encaptulation.
+    // outside world can access these variables, this is known as encaptulation.
     public int getAge() { // getAge is defined in the same class
         // we can access the age variable here , as it is in the same class
         return age;
@@ -23,8 +22,8 @@ class Human {
     public String getName() {  // this will now us return the name, when we call the method
         return name;
     }
-    // getter method helps us in getting the information that is set private
-    // setter makes us set the information/ data to those variables who are set as private
+    // getter method helps us in getting the information that is set private.
+    // setter makes us set the information/ data to those variables who are set as private.
 
     // set the values
     public void setAge(int age) { // accepts the value
@@ -44,11 +43,12 @@ public class encaptulation {
         // now we have variables as private, this makes the variables as not visible.
         // obj.age = 11;
         // obj.name = "ahsaan";
-        // we can access the variables here , because they are private
+        // we cannot access the variables here, because they are private.
         // but what we can do is that we can access the methods, those are public.
         // setting the age now
         obj.setAge(21);
         obj.setName("Ahsaan");
+        // once we set tha age, we can call the getMethod to return us the age.
         System.out.println(obj.getAge());
         System.out.println(obj.getName());
 
