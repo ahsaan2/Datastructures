@@ -2,12 +2,12 @@ package oopsInJava;
 
 abstract class Car {
     // It is not compulsory to have abstract methods in the abstract class.
-    public abstract void drive();
+    public abstract void drive(); // these methods are defined in another class.
 
     // we defined the method here, but we are not implementing anything here.
     // so, what we can do is that we will remove the curly braces and put a
     // semicolon at the end, and let
-    // some one else define it
+    // some one else define it(Another class)
     // -->> so, if we only have to declare a method and not defining or providing a
     // body to it , we can create
     // it as abstract
@@ -23,6 +23,9 @@ abstract class Car {
     public abstract void fly();
 }
 
+// if we do not define all the methods inside a class that is extending that
+// class, then we define that class also as abstract
+// and let some other class extend that class
 abstract class wagonR extends Car { // If we are extending a abstract class we need to define the methods of the
     // abstract class.
     // wagonR knows how to drive
@@ -35,7 +38,8 @@ abstract class wagonR extends Car { // If we are extending a abstract class we n
         System.out.println("I can start the car:");
     }
 }
-// in abstract class the class that is not abstract is called concreate class, and we can create object of the concreate class only
+// in abstract class the class that is not abstract is called "concreate" class,
+// and we can create object of the concreate class only
 
 class updatedWagonR extends wagonR { // we have to create the object of updatedWagonR now
     public void fly() {
@@ -46,18 +50,18 @@ class updatedWagonR extends wagonR { // we have to create the object of updatedW
 // it is compulsory to define all the abstract methods.If we do not implement
 // all the methods of the abstract class, we get a compile
 // error and to remove that we make that class also abstract. But the problem is
-// we cannot create object of the abstract classes.
+// "we cannot create object of the abstract classes."
 // so we create another class and extend these methods
 
 // Abstract methods are only defined by the abstract class.
 
 public class abstractMethods {
     public static void main(String[] args) {
-        // Car car = new Car(); // we can't create object of the abstract class.
-        // we can create the reference of the abstract class.
+        // Car car = new Car(); // "we can't create object of the abstract class."
+        // "we can create the reference of the abstract class."
         // Car obj = new wagonR(); // once wagonR gets declared as abstract, we cannot
         // create object of that class now
-        Car obj = new updatedWagonR();
+        Car obj = new updatedWagonR();  // reference of abstract class is present.
 
         obj.drive();
         obj.playMusic();
@@ -67,7 +71,7 @@ public class abstractMethods {
 
 }
 /**
- * Abstract methods:->Declared with the keyword abstract.Abstract classes can
+ * Abstract methods:->Declared with the keyword "abstract".Abstract classes can
  * not initiated.
  * We declare an abstract method without any implementation.
  * Methods in interface that are not defined static or default, are implicitly

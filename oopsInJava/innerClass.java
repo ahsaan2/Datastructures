@@ -33,7 +33,7 @@ public class innerClass {
         // class first.
         // --> If we have the inner class as static we do not need to use object of the
         // outer class first while creating the object
-        mainClass.innerclass1 obj3 = new innerclass1();
+        mainClass.innerclass1 obj3 = new innerclass1();  // no need of the obj of mainclass.
         obj3.print();
 
         obj.show();
