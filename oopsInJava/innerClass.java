@@ -2,6 +2,8 @@ package oopsInJava;
 
 import oopsInJava.mainClass.innerclass1;
 
+// annotations which work at the class level
+@Deprecated // means you can use it , but don't use it.
 class mainClass { // static can not be used here.
     int age;
 
@@ -20,6 +22,7 @@ class mainClass { // static can not be used here.
             System.out.println("I am static inner class:");
         }
     }
+
 }
 
 public class innerClass {
@@ -33,7 +36,7 @@ public class innerClass {
         // class first.
         // --> If we have the inner class as static we do not need to use object of the
         // outer class first while creating the object
-        mainClass.innerclass1 obj3 = new innerclass1();  // no need of the obj of mainclass.
+        mainClass.innerclass1 obj3 = new innerclass1(); // no need of the obj of mainclass.
         obj3.print();
 
         obj.show();
