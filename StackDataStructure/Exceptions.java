@@ -40,7 +40,7 @@ public class Exceptions {
         // the exception is found because of try-catch block.
         System.out.println("Bye");
         try {
-            System.out.println(nums[3]);
+            System.out.println(nums[2]);
         } catch (Exception e) {
            
             System.out.println("Array index out of bounds at 3"+ e);
