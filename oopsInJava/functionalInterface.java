@@ -3,7 +3,7 @@ package oopsInJava;
 @FunctionalInterface // checks for only one method, will give error if we have two methods present.
 interface InnerfunctionalInterface {
     // should have only one method
-    void show();
+    void show();               // SAM -> SINGLE ABSTRACT METHOD INTERFACE.
     // void print();
 
 }

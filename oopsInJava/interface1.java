@@ -7,7 +7,7 @@ package oopsInJava;
  */
 
 interface I { // interface says that i will give you the methods that you need, but I will not
-              // implement them.Its your job(class) to
+              // implement them.Its your job( job of a class) to
     // implement those methods
 
     // interface is similar to the class, that contains methods abstract and public
