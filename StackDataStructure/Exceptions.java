@@ -1,7 +1,7 @@
 package StackDataStructure;
 
 public class Exceptions {
-    // java uses exceptions to handle error and other exception errors.
+    // java uses exceptions to handle error and other exceptional errors.
     // An exception is a event that occurs during the excecution of the program and
     // disturbs the normal execution of the program.
     public static void main(String[] args) {
@@ -16,11 +16,11 @@ public class Exceptions {
         // 1. put the critical statement in a separate block
         int i = 0;
         int j = 0;
-        try // if we try this critical statement, it will be executed and as a developer we
-            // need to catch that error
+        try // In a try block we have our critical statement, it will be executed and as a developer we
+            // need to catch that error.
         {
            j = 20 / i; // once this exception executes, if there is another critical statement below
-                        // this that will not be executed
+                        // this that will not be executed. That means all the lines of code that comes after this will not be executed at all.
             System.out.println(nums[3]);
             System.out.println(2); // out of bound exception
 
@@ -28,8 +28,9 @@ public class Exceptions {
         // the moment exception is thrown, it is thrown as a object, and we have to
         // accept it as a object
         // catch block is executed only in case of exception.
-        catch (ArithmeticException e) { // e means th ebject of class Exception
+        catch (ArithmeticException e) { // e means th object of class Exception
             System.out.println("Cannot divide by the zero:" + e);
+            // java.lang.ArithemeticException
 
         }
         catch(ArrayIndexOutOfBoundsException e){
@@ -52,7 +53,7 @@ public class Exceptions {
 }
 /**
  * Errors:->
- * 1. Compile time Error:-technical errors/ Compiler checks the error at compile
+ * 1. Compile-time Error:-technical errors/ Compiler checks the error at compile
  * time
  * 2. Run-time error:- Compile does not check the error at the compile time,
  * though it given exception/error at the runtime
