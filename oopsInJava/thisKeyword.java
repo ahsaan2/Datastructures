@@ -1,7 +1,7 @@
 package oopsInJava;
 
 class encaptulationExample {
-    private int age;
+    private int age;  // instance variable.
     private String name;
 
     // we create a method to get the age, this method is public and is inside the
@@ -47,4 +47,6 @@ public class thisKeyword {
     }
 
 }
-// this keyword
+// this keyword:-> this keyword is used to refer the current class instance variables.
+// it can be used to invoke current class varaible (implicitly)
+// this keyword is used to invoke the current class constructor, it is used to reuse the constructor.

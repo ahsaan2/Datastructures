@@ -1,10 +1,11 @@
 package oopsInJava;
 
 class calculator {
-    calculator(){
-       // super();  // calls the object class, we we mention super() here or not.
+    calculator() {
+        // super(); // calls the object class, we we mention super() here or not.
         System.out.println("I am the parent class of calculator:");
     }
+
     public int add(int a, int b) {
         return a + b;
     }
@@ -20,12 +21,13 @@ class calculator {
 // }
 
 class newCalculator extends calculator {
-    newCalculator(){
+    newCalculator() {
         // super keyword must be always the first statement in the constructor
         super();
         System.out.println("I am in the child class of calculator:");
-       
+
     }
+
     public int divide(int a, int b) {
 
         return a / b;
@@ -34,7 +36,9 @@ class newCalculator extends calculator {
     public int multiply(int a, int b) {
         return a * b;
     }
-
+    // if we create another class that will extend the class calculator, then we
+    // will have hierarchical inheritance(that is two or more class inherit the same
+    // class.)
 }
 
 public class inheritanceInJava {
@@ -42,8 +46,10 @@ public class inheritanceInJava {
         // calculator obj = new calculator();
         // int addAns = obj.add(12, 12);
         // System.out.println(addAns);
-        newCalculator cal = new newCalculator(); // once we create the object of the class, it will first call the constructor of that 
-        // class and because of super keyword the execution of the program will keep on going to the upper or paent class.
+        newCalculator cal = new newCalculator(); // once we create the object of the class, it will first call the
+                                                 // constructor of that
+        // class and because of super keyword the execution of the program will keep on
+        // going to the upper or paent class.
         int ans2 = cal.divide(12, 2);
         System.out.println(ans2);
         int ans3 = cal.add(12, 12); // extended property
@@ -55,8 +61,8 @@ public class inheritanceInJava {
 }
 // java supports single level inheritance, multi-level inheritance
 // -->> multi-level inheritance=>when we have a class that is getting inherited
-// by something else, and that class is itself getting inherited
-// by something else.
+// by some other class and, that class is itself getting inherited
+// by some other class.
 // (parent(A) --> child(B)(this becomes now parent) --> child).
 // -->> Java does not support multiple inheritance.(because of the ambiguity,
 // suppose if the two parent class has the same method
