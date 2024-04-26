@@ -6,13 +6,13 @@ package oopsInJava;
  * 
  */
 
-interface I { // interface says that i will give you the methods that you need, but I will not
+ interface I { // interface says that i will give you the methods that you need, but I will not
               // implement them.Its your job( job of a class) to
     // implement those methods
 
     // interface is similar to the class, that contains methods abstract and public
     // by default.
-    void show(); // also "public and abstract."
+   public abstract void show(); // also "public and abstract."
 
     void config();
 
@@ -24,7 +24,7 @@ interface I { // interface says that i will give you the methods that you need, 
    String name = "BLR";
 
 }
-// what is the need of the interface=> We can implement multiple interfaces
+// what is the need of the interface => We can implement multiple interfaces
 interface I2{
     void play();
     void sing();
@@ -33,8 +33,7 @@ interface I2{
 // creating a class that will implement the interface methods
 class C implements I , I2{  // we can implement multiple interfaces
     // once we implement the interface in class, it becomes mandatory to define all
-    // the methods. If we failed to do so, that class
-    // is made to be abstract also
+    // the methods. If we fail to do so,that class is made to be abstract also
     public void show() {
         System.out.println("I am in show:");
     }
@@ -60,7 +59,7 @@ public class interface1 {
         // A
 
         I obj = new C();
-        I2 obj1 = new C();  // In I we dont have methods of I, so it does not know we call those methods using I
+        I2 obj1 = new C();  // In I we dont have methods of I2, so it does not know when we call those methods using I
         // we need to create the reference of the Interface 2 to create the class of C
         
         obj.show();
@@ -69,6 +68,7 @@ public class interface1 {
       //  I.age = 32;  // can not change because it is by default defined as final
         System.out.println(I.age);
         // I2 interfaces
+        // obj.play();   // this method is undefined for type I
         obj1.play();
         obj1.sing();
         

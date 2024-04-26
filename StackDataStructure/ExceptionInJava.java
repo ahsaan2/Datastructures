@@ -2,7 +2,7 @@ package StackDataStructure;
 
 class myException extends Exception {
 
-    public myException(String str) {
+   public myException(String str) {
         super(str);
     }
 }
@@ -16,11 +16,11 @@ public class ExceptionInJava {
         try {
             j = 18 / i;
             // System.out.println(arr[4]);
-            if (j == 0)
+            if (j == 0) throw new myException("I don't want 0");
                 // // throw new ArithmeticException("I dont want to print 0"); // calls the
                 // catch block to catch the exception
                 // } // throw used to throw the exception
-                throw new myException("I dont want 0"); // custom exception, create a class of that exception name
+              //  throw new myException("I dont want 0"); // custom exception, create a class of that exception name
 
         }
 
@@ -37,6 +37,6 @@ public class ExceptionInJava {
     }
 }
 // HIERARCHY OF EXCEPTIONS-> OBJECT -> THROWABLE ->
-// EXCEPTIONS(RUNTIME(aRITHEMATCI, ARRAYINDEXOUTOFBOUNDS, NULLPOINTEXCEPTION))
+// EXCEPTIONS(RUNTIME(ARITHEMATCIC, ARRAYINDEXOUTOFBOUNDS, NULLPOINTEXCEPTION))
 // AND ERROR
 // RUNTIME EXCEPTIONS ARE UNCHECKED EXCEPTIONS.

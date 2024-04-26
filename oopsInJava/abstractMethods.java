@@ -60,7 +60,7 @@ public class abstractMethods {
         // Car car = new Car(); // "we can't create object of the abstract class."
         // "we can create the reference of the abstract class."
         // Car obj = new wagonR(); // once wagonR gets declared as abstract, we cannot
-        // create object of that class now
+        // create object of that class now.
         Car obj = new updatedWagonR();  // reference of abstract class is present.
 
         obj.drive();

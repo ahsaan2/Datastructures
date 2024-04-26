@@ -1,4 +1,4 @@
-package StackDataStructure;
+package oopsInJava;
 
 class demoThread extends Thread {
     public void run() { // every thread calls the run method only
