@@ -23,7 +23,7 @@ public class email {
     private String password;
     private int defaultPasswordLength =10;
     private String department;
-    private int defaultmailBoxCapacity = 500;  // set as the default mail box capacity
+    // private int defaultmailBoxCapacity = 500;  // set as the default mail box capacity
     private int mailBoxCapacity;
     private String alternateMail;
 
@@ -59,6 +59,8 @@ public class email {
             return "No department";
 
         }
+        
+
     }
 
     // Generate a random password
