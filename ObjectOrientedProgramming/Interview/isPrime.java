@@ -2,7 +2,6 @@ package ObjectOrientedProgramming.Interview;
 
 import java.util.Scanner;
 
-import oopsInJava.strings;
 
 public class isPrime {
     // prime numbers are those numbers that are divisible by 1 and the number
