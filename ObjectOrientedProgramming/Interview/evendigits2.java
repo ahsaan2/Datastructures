@@ -28,7 +28,7 @@ public class evendigits2 {
                 // we have got our answer
                 ans++;
             }
-         
+
         }
         return ans;
 
