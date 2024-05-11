@@ -29,7 +29,7 @@ public class maxWealth {
                 // account
                 // sum+= row and col[at that row]
                 // sum ie equal to the accounts and the accounts of that person
-                sum += accounts[person][account];
+                sum += accounts[person][account]; // every single elements row+col in the accounts
             }
             // now if the sum is max of the value we have, we return the sum
             if (sum > max) {
