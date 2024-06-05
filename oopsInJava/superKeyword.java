@@ -1,14 +1,15 @@
 package oopsInJava;
 
-class A extends Object {
+class A extends Object {// every class in java extends object class
     A() {
         super(); // we dont have any class above here , so why do we use this super here
-        // because every class in java extends Object class
+        // because "every class in java extends Object class"
         System.out.println("I am in constructo A"); // will call this constructor because of super
     }
 
     A(int a) {
-       super();  // used to refer to the immediate parent class object.
+        super(); // super keyword is used to refer the immediate parent class/object. It will
+                 // keep shifting the control to the above class
         System.out.println("int a");
     }
 }
@@ -18,13 +19,15 @@ class B extends A { // Object of B will also call the constructor of A, as A is 
         // Every constructor has a method in java, even if we do not mention it,that
         // method is called super()
         super();
+
         System.out.println("I am in constructor B");
-        // so, this method executed the constructor of the same class, super method executed the constructor of the super class
+        // so, this method executed the constructor of the same class, super method
+        // executed the constructor of the super class
     }
 
     B(int a) {
-        // super(a); // will call the super constructor, of parameterized type.
-        this();  // will execute the constructor of same class.
+        super(a); // will call the super constructor, of parameterized type.
+        // this(); // will execute the constructor of same class.
 
         System.out.println("int B");
 
@@ -35,8 +38,8 @@ class B extends A { // Object of B will also call the constructor of A, as A is 
 public class superKeyword {
     public static void main(String[] args) {
         B obj1 = new B(1);
-        System.out.println(obj1);  // hashvalue
-        // B obj = new B();
+        System.out.println(obj1); // hashvalue
+        // B obj2 = new B();
         // when we call the default constructor, it will go first to B default
         // constructor
         // and there we have the super(), so it will go to the parent constructor and

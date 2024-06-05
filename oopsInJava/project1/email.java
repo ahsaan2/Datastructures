@@ -49,6 +49,8 @@ public class email {
         // take the input value from the user
         Scanner input = new Scanner(System.in);
         int depChoice = input.nextInt();
+        input.close();
+
         if (depChoice == 1) {
             return "Sales";
         } else if (depChoice == 2) {

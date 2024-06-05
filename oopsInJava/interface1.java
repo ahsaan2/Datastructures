@@ -8,9 +8,9 @@ package oopsInJava;
 
  interface I { // interface says that i will give you the methods that you need, but I will not
               // implement them.Its your job( job of a class) to
-    // implement those methods
+    // implement those methods.
 
-    // interface is similar to the class, that contains methods abstract and public
+    // interface is similar to the class, that contains methods that are abstract and public
     // by default.
    public abstract void show(); // also "public and abstract."
 
@@ -25,14 +25,14 @@ package oopsInJava;
 
 }
 // what is the need of the interface => We can implement multiple interfaces
-interface I2{
+interface I2 {
     void play();
     void sing();
 }
 
 // creating a class that will implement the interface methods
-class C implements I , I2{  // we can implement multiple interfaces
-    // once we implement the interface in class, it becomes mandatory to define all
+class C implements I, I2{  // we can implement multiple interfaces
+    // once we implement the interface in class, it becomes "mandatory" to define all
     // the methods. If we fail to do so,that class is made to be abstract also
     public void show() {
         System.out.println("I am in show:");
@@ -52,13 +52,14 @@ class C implements I , I2{  // we can implement multiple interfaces
 
 
 public class interface1 {
+    // in java we can create the object of the interface directly , because they are abstract by nature.
     public static void main(String[] args) {
         // A obj = new A(); // we cannot create the object of the interface, cannot
         // instantiate the type A
-        // now we can create the object of the class using the reference of if interface
+        // now we can create the object of the class using the reference of its interface
         // A
 
-        I obj = new C();
+            I obj = new C();
         I2 obj1 = new C();  // In I we dont have methods of I2, so it does not know when we call those methods using I
         // we need to create the reference of the Interface 2 to create the class of C
         

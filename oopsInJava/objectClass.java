@@ -9,6 +9,9 @@ class Laptop {
     // getter will get the variable and since we use public specifier, it will then
     // be accessed anywhere.
     int price;
+   Laptop(){
+    super();  // every class will implement and call the object class, whether we define it here or nor
+   }
 
     public void setModel(String model) {
         this.model = model;
@@ -22,7 +25,7 @@ class Laptop {
     @Override // is an Annotation, used to generate the error message if the method does not
               // override or implement the method declared
     // in super type
-    public String toString() {   // Overrides the main toString() method.
+    public String toString() { // Overrides the main toString() method.
         return "hey";
     }
 }

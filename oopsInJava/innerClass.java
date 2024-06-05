@@ -11,13 +11,13 @@ class mainClass { // static can not be used here.
         System.out.println("I am in the main class:");
     }
 
-    class innerclass {
+    class innerclass { // non static inner class, so we need the object of the outer class for this.
         public void config() {
             System.out.println("I am in the inner class of the main class:");
         }
     }
 
-    static class innerclass1 {
+    static class innerclass1 {// since this inner class is static, we do not need the object of the outer class for this.
         void print() {
             System.out.println("I am static inner class:");
         }

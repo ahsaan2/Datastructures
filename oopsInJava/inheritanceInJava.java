@@ -2,7 +2,7 @@ package oopsInJava;
 
 class calculator {
     calculator() {
-        // super(); // calls the object class, we we mention super() here or not.
+        // super(); // calls the object class, we can and cannot mention super() class here, it does not matter
         System.out.println("I am the parent class of calculator:");
     }
 
@@ -17,7 +17,7 @@ class calculator {
 // public class calu{
 // // we can have only 1 public class in the java file, if we have another one
 // it will show us an error as : public must be defined
-// // in its own file
+//  in its own file
 // }
 
 class newCalculator extends calculator {
@@ -41,7 +41,7 @@ class newCalculator extends calculator {
     // class.)
 }
 
-public class inheritanceInJava {
+public class inheritanceInJava{
     public static void main(String[] args) {
         // calculator obj = new calculator();
         // int addAns = obj.add(12, 12);
@@ -49,7 +49,7 @@ public class inheritanceInJava {
         newCalculator cal = new newCalculator(); // once we create the object of the class, it will first call the
                                                  // constructor of that
         // class and because of super keyword the execution of the program will keep on
-        // going to the upper or paent class.
+        // going to the upper or parent class.
         int ans2 = cal.divide(12, 2);
         System.out.println(ans2);
         int ans3 = cal.add(12, 12); // extended property

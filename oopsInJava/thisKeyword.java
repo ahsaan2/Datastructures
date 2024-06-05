@@ -47,6 +47,6 @@ public class thisKeyword {
     }
 
 }
-// this keyword:-> this keyword is used to refer the current class instance variables.
+// this keyword:-> this keyword is used to refer the "current class instance variables."
 // it can be used to invoke current class varaible (implicitly)
 // this keyword is used to invoke the current class constructor, it is used to reuse the constructor.

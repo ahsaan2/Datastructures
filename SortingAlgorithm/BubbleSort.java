@@ -60,6 +60,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         BubbleSort sort = new BubbleSort();
         int[] arr = { 5, 2, 4, 1, 7, 6, 9, 0, 8};
+        System.out.println("The Unsorted Array is:");
         sort.display(arr);
 
         sort.bubbleSort(arr);
