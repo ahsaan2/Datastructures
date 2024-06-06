@@ -40,7 +40,7 @@ public class threadDemo2 {
         // accordance with the scheduler.
 
         System.out.println(obj1.getPriority()); // will give the priority of 5
-        // the prioriity range from 1 to 10, 1 is the least priority and 10 is the
+        // the priority range from 1 to 10, 1 is the least priority and 10 is the
         // highest priority.
         // By default we have a normal priority of the thread
 

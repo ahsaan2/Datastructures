@@ -3,34 +3,40 @@ package oopsInJava;
 class demo extends Thread { // once we extend this class with the thread, it does not remain the normal
                             // class, but it becomes the thread.
     public void run() {
-        for (int i = 0; i < 100; i++) {  // we can see now the output is somehow printed as they are running in parallel.
+        for (int i = 0; i < 100; i++) { // we can see now the output is somehow printed as they are running in parallel.
             System.out.println("Hii");
 
         }
     }
 }
-// all the threads do not run at the same-time, the threads run are decided by the scheduler.Its scheduler's job to execute.
+
+// all the threads do not run at the same-time, the threads run are decided by
+// the scheduler.Its scheduler's job to execute.
 class demo1 extends Thread {
-    public void run() {  // start calls the run method
+    public void run() { // start calls the run method
         for (int i = 0; i < 100; i++) {
             System.out.println("Hello");
 
         }
     }
 }
+// Synchronization-->> helps one thread at the particular time to complete a given task entirely.
+// 
 
 public class threadsDemo {
     public static void main(String[] args) {
         demo obj1 = new demo();
+        obj1.setPriority(5);
         demo1 obj2 = new demo1();
-        obj1.start(); // once the execution is in the main method, the run(only run method can be called or overriden in threads) method is called and the
-                     // execution will go to the run
+        obj1.start(); // once the execution is in the main method, the run(only run method can be
+                      // called or overriden in threads) method is called and the
+                      // execution will go to the run
         // method in class demo. The program execution will return only to the main
         // method when the execution of the run method in
         // first class gets over.
         // After that the execution will come back to the main method and now the method
         // 2 of the second class will be called.
-        obj2.start();  // these run in the sequence.(Cause of threads we can run them in parallel)
+        obj2.start(); // these run in the sequence.(Cause of threads we can run them in parallel)
         // so, here what happens is that first one method gets complete and then another
         // method gets complete.The methods are not run
         // parallel to each other.
@@ -57,11 +63,17 @@ public class threadsDemo {
     // multitasking.
 }
 /**
- * To run the above methods in parallel, main method need to have 2 threads one thread points to one show method and another thread\
+ * To run the above methods in parallel, main method need to have 2 threads one
+ * thread points to one show method and another thread\
  * points to another show method.
- * // we need to use the start() method for having the start/having the thread, or creates the new thread.
- * Start method call the run method and not the show or any method we create, so, once we use the threads, start calls the run() method. So, every program where we use threads, need to have the run method.
- * Now, the methods are running in parallel and for small data we will get the output like they are running in a sequence, because the 
+ * // we need to use the start() method for having the start/having the thread,
+ * or creates the new thread.
+ * Start method call the run method and not the show or any method we create,
+ * so, once we use the threads, start calls the run() method. So, every program
+ * where we use threads, need to have the run method.
+ * Now, the methods are running in parallel and for small data we will get the
+ * output like they are running in a sequence, because the
  * machines are so fast.
- * We can also increase the loopp condition to check for the parallel working of threads
+ * We can also increase the loopp condition to check for the parallel working of
+ * threads
  */

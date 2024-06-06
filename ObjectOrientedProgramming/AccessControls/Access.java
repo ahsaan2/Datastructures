@@ -7,7 +7,7 @@ public class Access {
     int[] arr;
     private int num2;
 
-    // suppose we create a new num as private, so how do access that. __>> we can
+    // suppose we create a new num as private, so how do we access that.>> we can
     // access them by the use of getters and setters
     // setter for num2
     public void setNum(int num2) {

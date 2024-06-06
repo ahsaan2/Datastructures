@@ -6,7 +6,7 @@ public class son extends abstractClass { // son has to override the methods pres
     }
     
     void career( ) {
-        System.out.println("My name is ahsaan:");
+        System.out.println("I am a student:");
     }
 
     void info() {

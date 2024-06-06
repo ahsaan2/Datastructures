@@ -21,14 +21,14 @@ public class ExceptionInJava {
                 // catch block to catch the exception
                 // } // throw used to throw the exception
               //  throw new myException("I dont want 0"); // custom exception, create a class of that exception name
-
+            
         }
 
         // if we try the critical statement and there is exception, we need to handle it
         // for that we can throw the error in catch block for arithematic exception
         catch (myException e) {
             j = 18 / 1; // handle the exception
-            System.out.println("Thats the default execution:" + " " + e); // e will take the constructor string
+            System.out.println("That's the default execution:" + " " + e); // e will take the constructor string
         } catch (Exception e) {
             System.out.println("Exception found");
 

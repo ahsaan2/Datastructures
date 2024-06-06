@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-class MyException extends Exception {
-    public String toString() {
-        return ("Enter marks greater then 40");
-    }
+
+class myException extends Exception {
+  public myException(String message){
+    super(message);
+  }
 }
 
 class Student {
@@ -12,7 +13,7 @@ class Student {
     int m1, m2, m3;
 
     void avgMarks() {
-        try {
+        try { // try-block will have the critical code that can throw an exception.
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter the name of the student:");
             name = sc.nextLine();
@@ -26,7 +27,7 @@ class Student {
             m3 = sc.nextInt();
             sc.close();
             if (m1 < 40 || m2 < 40 || m3 < 40) {
-                throw new MyException();
+                throw new myException("Provide marks greater than 40:");
             }
             System.out.println("Average marks are:" + (m1 + m2 + m3) / 3);
 
@@ -34,7 +35,7 @@ class Student {
             System.out.println(e);
 
         }
-
+      
     }
 }
 
