@@ -16,7 +16,8 @@ public class subArrrays {
                           // BRUTE-FORCE APPROACH
     static int findLength(int[] arr, int target) {
         // we can have a variable as the maxLength
-        int maxLength = Integer.MIN_VALUE; /// univerrrsal min length
+        // int maxLength = Integer.MIN_VALUE; /// univerrrsal min length
+        int maxLength = 0;
         // traverse the array
         for (int i = 0; i < arr.length; i++) {
             // noppw checking for the sum, as provided the condition
