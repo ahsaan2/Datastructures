@@ -24,6 +24,8 @@ public class Main {
     String senctence = "ahs  ad r s adfa fadfa ";
     String [] names = senctence.split(" ");
     System.out.println(Arrays.toString(names));
+    // String pool==:  is a storage area in the java heap memory. It is a cache of string objects that are used on the java program
+    // String pool is created when the JVM starts and is destroyed when the JVM exits.
 
 }
 }
