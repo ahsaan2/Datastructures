@@ -33,6 +33,8 @@ public class fruitsInbasket {
                 // now we can check if count is 1, then remove it
                 if (count == 1)
                     bucket.remove(arr[left]);
+                // here in the while loop condition we want to evaluate the if statement only
+                // once, and then move to next code
 
                 else
                     // rmove the value by 1, and also put that value in the map again/ update value
@@ -40,6 +42,9 @@ public class fruitsInbasket {
                     bucket.put(arr[left], count - 1);
                 // update the left
                 left++;
+                // ** the code block inside the if statement is only executed when some
+                // condition is true, , the while loop will continue iterate and if statement
+                // will be evaluated again and again
 
             }
             // if the bucket size is in control then we have to find the length
