@@ -5,7 +5,12 @@ import java.util.Arrays;
 public class mergeSort {
     public static void main(String[] args) {
         int[] arr = { 5, 4, 3, 2, 1 };
-        int [] ans = mergesort(arr);
+
+        int[] ans = mergesort(arr);
+        // the original array is not modified, as we have pass the copy of the original
+        // array and at each recursive call,
+        // new objects are created.
+        System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(ans));
 
     }
@@ -17,32 +22,36 @@ public class mergeSort {
         }
         // we have an array, we divide it in two parts
         int mid = arr.length / 2;
-        int [] left = mergesort(Arrays.copyOfRange(arr, 0, mid));
-        int [] right = mergesort(Arrays.copyOfRange(arr, mid, arr.length));
+        int[] left = mergesort(Arrays.copyOfRange(arr, 0, mid));
+        int[] right = mergesort(Arrays.copyOfRange(arr, mid, arr.length));
+        // copyOfRange -->>here the copy of the original array is provided, at each
+        // recursive call a new object is created.
+        // the original array remains the same, there is no modification in the original
+        // array
         // now we have to merge the two
         return merge(left, right);
     }
 
-    static int[] merge(int [] left, int [] right){
+    static int[] merge(int[] left, int[] right) {
         // create a new array that takes both array elements
-        int [] mix = new int[left.length + right.length];
+        int[] mix = new int[left.length + right.length];
         int i = 0;
         int j = 0;
         int k = 0;
         while (i < left.length && j < right.length) {
-            // check the values 
+            // check the values
             if (left[i] < right[j]) {
                 mix[k] = left[i];
                 i++;
-                
-            }
-            else{
+
+            } else {
                 mix[k] = right[j];
                 j++;
             }
             k++;
         }
-        // now there is a possibility where we will have one array empty and the other will still have the items in it
+        // now there is a possibility where we will have one array empty and the other
+        // will still have the items in it
         while (i < left.length) {
             mix[k] = left[i];
             i++;
