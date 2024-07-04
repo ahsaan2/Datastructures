@@ -209,7 +209,7 @@ public class CustomLinkedList<Ttype> {
  * for(int i =0; i < n; i++){
  * fast = fast.next
  * }
- * // and now we move both the poits one by one, till the next of fast is null
+ * // and now we move both the points one by one, till the next of fast is null
  * while(fast.next != null){
  * slow = slow.next;
  * fast = fast.next;

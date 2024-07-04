@@ -8,11 +8,11 @@ public class TreeIntroduction{
      * -->> Tree is a hierarchial structure as elements in a tree are arranged in
      * multiple levels.
      * In trees order of elements is not important, apart from BST
-     * -->> A node with no children in known as "leaf node."
+     * -->> A node with no children is known as "leaf node."
      * -->> set of all nodes at a "particular depth" in known as "level", root node
      * is at 0th level.
      * -->> Depth of a node-->length of the "path from root node to that node".
-     * -->> size of the node-->> the number of descendants it has along with the
+     * -->> size of the node-->> the number of "descendants" it has along with the
      * node iteslf.
      * // Skwed Tree-->> If every node in the tree has only one child, it can be
      * either on the left side(left skewed) or on the right side(right skewed).
@@ -20,7 +20,7 @@ public class TreeIntroduction{
     /**
      * --------------WHY Trees?----------------
      * We can add the items or remove the items or find the items in the tree data
-     * structure in O(log n) time.
+     * structure in" O(log n)" time.
      * -->> Ordered storage.
      * Limitation -->> unBalanced binary tree has a efficieny of O(n). , how do we
      * solve this problem-->> We create binary trees that will balance themselves
