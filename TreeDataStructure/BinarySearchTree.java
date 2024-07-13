@@ -29,7 +29,7 @@ public class BinarySearchTree {
 
     }
 
-    public  Node root;
+    public Node root;
 
     public class Node {
         int value;
@@ -180,6 +180,7 @@ public class BinarySearchTree {
     public void inOrder() {
         inOrder(root);
     }
+    // In BST if we use the inOrder traversal we can visit nodes in the sorted manner
 
     private void inOrder(Node node) {
         if (node == null) {
@@ -233,7 +234,7 @@ public class BinarySearchTree {
     }
 
     // find the maximum node value
-    public  int findMax(Node root) {
+    public int findMax(Node root) {
         if (root == null) {
             return Integer.MIN_VALUE;
         }

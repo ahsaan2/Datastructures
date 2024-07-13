@@ -68,4 +68,5 @@ public class BinaryTree {
         tree.populate(scanner);
         tree.display();
     }
+    
 }

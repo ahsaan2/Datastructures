@@ -32,7 +32,7 @@ public class BFS {
    */
   /**
    * -------ALGORITHM----
-   * // HERE WE STORE THE EVERY CHILD OF THE NODE IN THE QUEUE AND WE ACCESS IT,
+   * // HERE WE STORE THE EVERY CHILD OF THE NODE IN THE QUEUE AND
    * WE ACCESS THE ITEMS IN THE FIRST IN FIRST OUT.
    * 1. create a queue and fill it with the items
    * 2. get the root node at the beginning of the queue.
@@ -55,6 +55,7 @@ public class BFS {
     // we start from the root node, and we have to have a queue to store all the
     // child nodes
     Queue<TreeNode> queue = new LinkedList<>();
+    // offer-> retreives and removes the head of the queue.
     // Initially it will only have the root node
     queue.offer(root);
     // now we will keep removing till the queue gets empty and
