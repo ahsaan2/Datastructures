@@ -1,0 +1,4 @@
+    Greedy Algorithms make the locally choices at each step with the hope of finding the global optimum solution
+    In these algorithms, decisions are made based on the information available at the current moment without considering at the consequences of these decisions in the future.
+    The key idea is to select the best possible choice at each step, leading to a solution that may not always be the most optimal but yet good enough for many problems.
+    
