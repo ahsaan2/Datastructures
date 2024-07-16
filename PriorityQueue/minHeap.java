@@ -72,7 +72,7 @@ public class minHeap {
         heapSize -= 1;
         // once we remove the element from the heap, the property of the heap can be
         // voilated, and to counter that we do the topdown approach/ bubbleDown
-        bubbleDown(heapSize);
+        bubbleDown(0);
         return popped;
     }
 
@@ -90,7 +90,7 @@ public class minHeap {
         }
         // for the right childindex to be minimum, we need to have the left child,
         // minIndex also smaller
-        if (rightchildIndex < array[heapSize] && rightchildIndex < minIndex && rightchildIndex < leftchildIndex) {
+        if (rightchildIndex < array[heapSize] && rightchildIndex < minIndex && array[rightchildIndex] < array[leftchildIndex]) {
             minIndex = rightchildIndex;
         }
         // now if the condition is not voilate while removing the element then
@@ -100,6 +100,7 @@ public class minHeap {
         }
         swap(index, minIndex);
         // also again bubble-down once the new indexes are changes
+        bubbleDown(minIndex);
 
     }
 
