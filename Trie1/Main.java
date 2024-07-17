@@ -7,10 +7,15 @@ public class Main {
         trie.insert("def");
         trie.search("abc");
         trie.search("def");
-        System.out.println("Search element"+" "+ trie.search("abc"));
-        System.out.println("Search element"+" "+ trie.search("abg"));
-        System.out.println("Search element after removal"+" "+ trie.remove("abc"));
-        System.out.println("Search element"+" "+ trie.search("abc"));
+         // Before Removal
+         System.out.println("Search abc, Found="+trie.search("abc"));
+         trie.remove("abc");
+         // After Removal
+         System.out.println("Search abc, Found="+trie.search("abc"));
+        // System.out.println("Search element"+" "+ trie.search("abc"));
+        // System.out.println("Search element"+" "+ trie.search("abg"));
+        // System.out.println("Search element after removal"+" "+ trie.remove("abc"));
+        // System.out.println("Search element"+" "+ trie.search("abc"));
 
 
 
