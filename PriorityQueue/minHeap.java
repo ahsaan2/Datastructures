@@ -60,6 +60,7 @@ class MinHeap<TDataType> {
     }
 
     // now to remove the element in the heap
+    @SuppressWarnings("unchecked")
     public TDataType remove() throws Exception {
         if (heapSize == 0) {
             throw new Exception("Heap array is empty, cannot remove the element");
@@ -84,13 +85,16 @@ class MinHeap<TDataType> {
 
         //new
         if(leftchildIndex < heapSize){
+            @SuppressWarnings("unchecked")
             int left_cmp = this.comparator.compare((TDataType)array[leftchildIndex], (TDataType)array[index]);
             if(left_cmp <= -1)
                 minIndex = leftchildIndex;
         }
 
         if(rightchildIndex < heapSize){
+            @SuppressWarnings("unchecked")
             int right_cmp = this.comparator.compare((TDataType)array[rightchildIndex], (TDataType)array[index]);
+            @SuppressWarnings("unchecked")
             int right_left_cmp = this.comparator.compare((TDataType)array[rightchildIndex], (TDataType)array[leftchildIndex]);
             if( right_cmp <= -1 && right_left_cmp <= -1)
                 minIndex = rightchildIndex;
@@ -106,6 +110,7 @@ class MinHeap<TDataType> {
 
     }
 
+    @SuppressWarnings("unchecked")
     public void bubbleUp(int index) {
         while (index != 0 && this.comparator.compare((TDataType)array[parent(index)],(TDataType)array[index]) >= 1) {
             swap(index, parent(index));
