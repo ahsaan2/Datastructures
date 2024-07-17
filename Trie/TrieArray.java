@@ -1,26 +1,29 @@
+// package Trie;
 
+import java.util.HashMap;
+import java.util.Map;
 
 class TrieNode {
-    TrieNode[] childrens;
+    Map<Character, TrieNode> childrens;
     boolean isTerminal;
 
     TrieNode(){
-        childrens = new TrieNode[26];
+        childrens = new HashMap<>();
         isTerminal = false;
     }
 }
 
-public class Trie {
+public class TrieArray {
     private TrieNode root;
 
-    public Trie() {
+    public TrieArray() {
         root = new TrieNode();
     }
 
     private TrieNode searchNode(String element){
         TrieNode current = root;
         for(char ch : element.toCharArray()){
-            current = current.childrens[ch - 'a'];
+            current = current.childrens.get(ch);
             if(current == null){
                 return null;
             }
@@ -33,20 +36,17 @@ public class Trie {
     public void insert(String element){
         TrieNode current = root;
         for(char ch : element.toCharArray()){
-            if(current.childrens[ch - 'a'] == null){
-                current.childrens[ch-'a'] = new TrieNode();
-            }
-            current = current.childrens[ch-'a'];
+            current.childrens.computeIfAbsent(ch, c -> new TrieNode() );
+            current = current.childrens.get(ch);
         }
         current.isTerminal = true;
-        // System.out.println(root);
     }
 
     // returns true, if element present in a trie data structure
-    public boolean search(String element){
-        TrieNode searchElement = searchNode(element);
-        if(searchElement == null) return false;
-        return searchElement.isTerminal;
+    public boolean serach(String element){
+        TrieNode searchNode = searchNode(element);
+        if(searchNode == null) return false;
+        return searchNode.isTerminal;
     }
 
     // return true => if removed
@@ -58,6 +58,5 @@ public class Trie {
             return true;
         }
         return false;
-
     }
 }
