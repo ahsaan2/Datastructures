@@ -50,7 +50,7 @@ public class Trie {
             }
         }
         return current;
-    }
+    } 
    
     // now return true or false, is the word is present
     public boolean search(String element){
@@ -65,8 +65,16 @@ public class Trie {
     public boolean remove(String element){
         // search the node
         TrieNode node = searchNode(element);
-        if (node != null && node.isTerminal) { // if node is not null && node is found.
+        if (node != null && node.isTerminal) { // if node is not null && node is a word.
             node.isTerminal = false; // 
+            return true;
+        }
+        return false;
+    }
+    public boolean startsWith(String prefix){
+        // we just need to make sure that the word we are looking for is not null
+        TrieNode currentNode = searchNode(prefix);
+        if (currentNode != null) {
             return true;
         }
         return false;
