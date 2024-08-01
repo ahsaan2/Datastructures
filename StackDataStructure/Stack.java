@@ -69,7 +69,8 @@ public class Stack {
             throw new StackOverFlowException("Cannot push " + item + " To stack");
         }
         pointer++;
-        data[pointer] = item;
+        data[pointer] = item;  // first the pointer is at index -1, and once we insert the first item in the stack
+        // the pointer will be at the index of 0
         return true;
     }
 
@@ -85,17 +86,20 @@ public class Stack {
         if (isEmpty()) {
             throw new Exception("Cannot pop stack is empty:");
         }
+        // the item removed will be the value at the index of the pointer.
         int removed = data[pointer];
         pointer--;
         return removed;
 
     }
-
+    // the stack will be only empty when the pointer defined will be at the same place that is at -1
     public boolean isEmpty() {
         return pointer == -1;
     }
 
     // create peek
+    // we can return the value at the pointer, that is when the elements are inserted in the stack the pointer gets updated
+    // and where the pointer will be currently that will be our peek element
     public int peek() throws StackUnderFlowException {
         // also can be empty
         if (isEmpty()) {

@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class bubbleSort {
     public static void main(String[] args) {
-        // int[] arr = { 1, 4, 2, 5, 12,11,21,7 };
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+        int[] arr = { 1, 4, 2, 5, 12,11,21,7 };
+        // 1 
+        // int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
         BubbleSort(arr);
         System.out.println(Arrays.toString(arr));
 
@@ -16,8 +17,11 @@ public class bubbleSort {
         int n = arr.length;
         swapped = false;
         for (int i = 0; i < n; i++) {
-            for (int j = 1; j < n - i - 1; j++) { // at each iteration an element will be at its sorted place
+            for (int j = 0; j < n - i - 1; j++) { // at each iteration an element will be at its sorted place
                 // now swap if the first item is greater then the second item
+                // the element at the index of j will only and only be swapped with the element at index + 1 when
+                // the jth element is greater
+                
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
